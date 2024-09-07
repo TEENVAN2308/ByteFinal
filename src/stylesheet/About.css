@@ -1,0 +1,27 @@
+.box1{
+    display: flex;
+    padding-top: 1rem;
+    padding-left: 4rem;
+}
+
+.about-box2{
+    position: absolute;
+    top:30vh;
+    color:  white;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+}
+
+.about-box3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+}
+.codeKeBossRules{
+    color:white;
+    
+}
