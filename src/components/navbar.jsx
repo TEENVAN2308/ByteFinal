@@ -5,7 +5,7 @@ import codexlogo from '../assets/images/codexLogo_nobg.png';
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar_custum">
       <div className="navbar-logo left">
 
       <img

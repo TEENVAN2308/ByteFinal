@@ -1,4 +1,52 @@
-body
+/* body
 {
   background: linear-gradient(to left,#e66465, #0e123c);
+} */
+
+body {
+  background: linear-gradient(to right, #03193a, rgb(22, 80, 160));
+  overflow-x: hidden;
+}
+
+html {
+  background: linear-gradient(to right, #03193a, rgb(22, 80, 160));
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+
+.swiper-pagination {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+
+
+.swiper-pagination .swiper-pagination-bullet {
+  background: white;
+  width: 30px;
+  /* Increased size to accommodate the number */
+  height: 30px;
+  border-radius: 50%;
+  color: black;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+/* } */
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  /* background: rgb(196, 7, 7); */
+
+  background: rgb(196, 7, 7);
+  color: white;
 }

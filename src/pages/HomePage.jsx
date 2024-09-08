@@ -1,10 +1,8 @@
 
 import { React, useState } from 'react';
-import Base from '../components/base'
-// import './style.css'
 
-import '../stylesheet/Home.css';
-import Navbar from '../components/navbar';
+import classes from '../stylesheet/Home.module.scss';
+
 import { Outlet, Link } from "react-router-dom";
 
 function Home() {
@@ -15,44 +13,44 @@ function Home() {
     };
     return (
         <>
-       
-            {/* <Base> */}
-          
-            <div className="box">
-                <div className="box1">
+           
+                {/* pageCover */}
+            <div className={classes.pageCover}>
+
+            
+            <div className={`shadow-lg position-absolute top-50 start-50 translate-middle ${classes.box}`}>
+                <div className={classes.box1}>
 
                 </div>
-                <div className="box2">
+                <div className={classes.box2}>
 
                 </div>
             </div>
 
-            <div className="innerBorder1">
+            <div className={`position-absolute top-50 start-50 translate-middle ${classes.innerBorder1}`}>
 
             </div>
-            <div className="innerBorder2">
-             
-                <div className="mainInner1">
-                    <div className='container'>
-                         <div className='byte_title'>BYTE 1.0</div>
+            <div className={`shadow-lg position-absolute top-50 start-50 translate-middle ${classes.innerBorder2}`}>
+                <div className={classes.mainInner1}>
+                    <div className={`mt-5 ms-5 p-5 ps-5 container`} style={{ color: "white" }}>
+                        <h1 className={`pb-3 ${classes.byte_title}`} style={{fontSize:'6rem'}}>BYTE <p style={{ color: "white", fontSize:'2rem'}}>2024</p> </h1>
+                            
+                        <div className="mb-3">
+                            <div className="mb-3 w-50 inputbox">
 
-                        <div className="">
-                            <div className="inputbox">
-
-                                <input type="text" className="w-85" id="exampleInputPassword1" placeholder='Team Number' />
+                                <input type="text" className="w-85" style={{fontSize:'1.7rem'}} id="exampleInputPassword1" placeholder='Team Number' />
                             </div>
                         </div>
-                        <Link type="button" to={'/rules'} style={{color:"white"}} className="butt">Start</Link>
+                        <Link type="button" to={'/rules'} style={{color:"white", fontSize:'2rem', marginTop:'1.5rem'}} className={`btn ${classes.custombtn} rounded-pill ps-5 pe-5`}>Start</Link>
 
                     </div>
+                    <div className={classes.homecodexlogo}>
+                            
+                    </div>
                 </div>
-                <div className="mainInner2"></div>
+                <div className={classes.mainInner2}></div>
             </div>
-            <div className="esi">
             </div>
-        {/* </Base> */}
-                
-            
             
         </>
     );
