@@ -27,7 +27,7 @@ const ResultsFull = ({ teams, onClickHandler }) =>{
             teams.map((team, index) => (
                     <div className="my-1 text-white text-xl p-3 w-6/12 team-container" 
                         key={index} onClick={ ()=> onClickHandler(index) }>
-                          <span> <b className="mr-5">Team Name </b> {team.name}  </span>
+                          <span> <b className="mr-5">Team Name </b> {team.teamName}  </span>
                           <span className="float-right text-md text-green-400"> { formatTimer(team.totalTimeTaken) }  </span>
                           <br /> <br />
                           <div className="text-green-500">

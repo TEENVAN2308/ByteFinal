@@ -58,9 +58,9 @@ function Round1result() {
                         <h1 style={{color:"red", fontSize:'7rem'}}>{formatTime(secondsRemaining)}</h1>
                         <h1 style={{fontFamily:"sans-serif"}}>ROUND 2 WILL START IN</h1>
                     </div>
-                    <div className="round1YourResult" style={{color:"white"}}>
+                    {/* <div className="round1YourResult" style={{color:"white"}}>
                         <h1>your result</h1>
-                    </div>
+                    </div> */}
 
                 </div>
 

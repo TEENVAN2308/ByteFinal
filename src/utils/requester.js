@@ -1,14 +1,14 @@
 import axios from "axios";
 
 
-const HOST_URI = "https://7de2-146-152-233-54.ngrok-free.app"
+const HOST_URI = "http://localhost:5000"
 const headers = { 
     'ngrok-skip-browser-warning':true
 }
 
 
 export async function getQuestions(){
-    const QUESTIONS_FETCH_ROUTE = "api/questions/fetch"
+    const QUESTIONS_FETCH_ROUTE = "api/questions"
     const ReqURI = `${HOST_URI}/${QUESTIONS_FETCH_ROUTE}`
 
     let questions = await axios.get(ReqURI, {headers})
@@ -17,7 +17,7 @@ export async function getQuestions(){
 
 
 export async function getTeams(){
-    const TEAM_FETCH = 'api/team/fetch'
+    const TEAM_FETCH = 'api/admin/view-result'
     const ReqURI = `${HOST_URI}/${TEAM_FETCH}`
 
     let response = await axios.get(ReqURI, {headers})

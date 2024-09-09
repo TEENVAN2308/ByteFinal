@@ -17,15 +17,16 @@ const Submit = (output) => {
     };
         //ye hai sendback function
         const sendtobacks = async () => {
-            
+            console.log("Output", output);  
             try {
-                const response = await fetch('http://localhost:5173/ques-one/getname', {
+                const response = await fetch('http://localhost:5000/api/compile/compile', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
                         outputs: output,
+                        teamName: localStorage.getItem("teamName"),
                     }),
                 }).then((response) => response.json())
                     .then((json) => console.log(json));

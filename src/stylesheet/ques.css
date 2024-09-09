@@ -13,17 +13,17 @@
 }
 .submit
 {
-    background-color: rgba(253, 17, 17, 0.908);
+    background-color: rgba(237, 51, 19, 0.882);
     color: rgb(238, 237, 238);
     box-sizing: border-box;
-    border:2px solid white;
-    height:10vh;
-    font-size: 1em;
-    width:15vw;
+    /* border:2px solid white; */
+    height:8vh;
+    font-size: 2em;
+    width:10vw;
     position: absolute;
-    top:8vh;
+    top:2vh;
     border-radius: 30px;
-    left:60vw;
+    left:67vw;
     padding:1vh;
     box-shadow: 3px 3px 3px white;
     
@@ -34,12 +34,12 @@
     box-sizing: border-box;
     border:2px solid white;
     height:10vh;
-    font-size: 1em;
-    width:15vw;
+    font-size: 1.5em;
+    width:10vw;
     position: absolute;
-    top:8vh;
+    top:1vh;
     border-radius: 30px;
-    left:60vw;
+    left:63vw;
     padding:1vh;
     box-shadow: 3px 3px 3px white;
 }

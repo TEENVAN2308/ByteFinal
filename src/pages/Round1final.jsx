@@ -54,7 +54,8 @@ function Round1final() {
     
         try {
             // Post the data using the postRound1Questions function
-            const response = await postRound1Questions(payloadObject);
+            const teamName=localStorage.getItem("teamName");
+            const response = await postRound1Questions(payloadObject,teamName);
             console.log('Data successfully posted:', response);
             
         } catch (error) {

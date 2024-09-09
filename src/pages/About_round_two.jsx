@@ -9,17 +9,15 @@ function About2() {
             <Base>
            
             <div className="about-box2 mt-3">
-                <h2 style={{fontSize:'5rem', marginTop:'3rem'}}>Second Round: Competitive Coding Round</h2>
-                <p className='mt-4' style={{fontSize:'2rem', marginTop:'3rem'}}>1. This is a preliminary round consisting 20 question under 30 minutes</p>
-                <p className='mt-3' style={{fontSize:'2rem', marginTop:'3rem'}}>2. Given a programm, assess it and debut it or choose the best option</p>
-                <hr />
-                <h2 className='mt-3' style={{fontSize:'5rem', marginTop:'3rem'}}>Contest Rules</h2>
-                <p className='mt-4' style={{fontSize:'2rem', marginTop:'3rem'}}>1. Each team can have maximum of two members</p>
-                <p className='mt-3' style={{fontSize:'2rem', marginTop:'3rem'}}>2. Only c,c++ and java programming Languages are alowed</p>
-                <p className='mt-3' style={{fontSize:'2rem', marginTop:'3rem'}}>3. The round's results are not subject to discussion</p>
-                <p className='mt-3' style={{fontSize:'2rem', marginTop:'3rem'}}>4. The decision of the judges is final</p>
+                    <h2 style={{ fontSize: '5rem', marginTop: '3rem' }}>Phase 2: Competitive Coding Roundd</h2>
+                    <p className='mt-4' style={{ fontSize: '2rem', marginTop: '3rem' }}>1.The second round is a logic-based case study coding challenge designed to assess participant’s logic-building skills.
+                    </p>
+                    <p className='mt-3' style={{ fontSize: '2rem', marginTop: '3rem' }}>2.This round will consist 2 case-study based questions, to be solved within 30 minutes..</p>
+                    <h2 className='mt-3' style={{ fontSize: '2rem', marginTop: '3rem' }}>3:Each question will be worth 10 points, with 5 points allocated for task completion and 5 points for code efficiency.</h2>
+                    <p className='mt-4' style={{ fontSize: '2rem', marginTop: '3rem' }}>4:The top 5 teams will qualify for the next phase</p>
+                    {/* <p className='mt-3' style={{ fontSize: '2rem', marginTop: '3rem' }}>5.Only the top 20 teams will qualify for the second round. </p> */}
 
-            </div>
+                </div>
 
             <div className="about-box3 ">
             <Link to="/ques-one" className='btn btn-danger ' style={{fontSize:'2rem'}} >Round 2</Link>

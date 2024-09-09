@@ -43,8 +43,8 @@ const Login = ({ setLogged, setPageMode }) => {
           formSuccess()
     }
     catch(err){
-      // formError()
-      formSuccess()
+      formError()
+      // formSuccess()
     }
   }
 

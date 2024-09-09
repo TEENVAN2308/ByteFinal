@@ -16,13 +16,14 @@ const Submit = (output) => {
     const sendtobacks = async () => {
         
         try {
-            const response = await fetch('http://localhost:5173/ques-one/getname', {
+            const response = await fetch('http://localhost:5000/api/compile/compile', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
                     outputs: output,
+                    teamName: localStorage.getItem("teamName"),
                 }),
             }).then((response) => response.json())
                 .then((json) => console.log(json));
@@ -39,7 +40,7 @@ const Submit = (output) => {
 
 
     return (
-        <button type='submit' onClick={handleSubmit} className='submit'>submit your answer</button>
+        <button type='submit' onClick={handleSubmit} className='submit'>submit</button>
     );
 }
 
