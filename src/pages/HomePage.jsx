@@ -4,7 +4,7 @@ import { React, useState } from 'react';
 import classes from '../stylesheet/Home.module.scss';
 
 import { Outlet, Link } from "react-router-dom";
-
+import adminlogo from '../assets/logo/user.png';
 function Home() {
     const [teamName, setTeamName] = useState('');
 
@@ -38,7 +38,7 @@ function Home() {
                         <div className="mb-3">
                             <div className="mb-3 w-50 inputbox">
 
-                                <input type="text" className="w-85" style={{fontSize:'1.7rem'}} id="exampleInputPassword1" placeholder='Team Number' />
+                                <input type="text" className="w-85" style={{fontSize:'1.7rem',color:"white",}} id="exampleInputPassword1" placeholder='Team Name' />
                             </div>
                         </div>
                         <Link type="button" to={'/rules'} style={{color:"white", fontSize:'2rem', marginTop:'1.5rem'}} className={`btn ${classes.custombtn} rounded-pill ps-5 pe-5`}>Start</Link>
@@ -48,8 +48,14 @@ function Home() {
                             
                     </div>
                 </div>
-                <div className={classes.mainInner2}></div>
+                <div className={classes.mainInner2}>
+                <div className="admin" >
+                <img src={adminlogo} style={{margin:'2rem'}} height={"50px"} width={"50px"} alt="" />
+            <Link  className='admin-button' to={'/admin'}>Admin</Link>
             </div>
+                </div>
+            </div>
+           
             </div>
             
         </>

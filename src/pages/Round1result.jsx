@@ -20,7 +20,7 @@ function Round1result() {
     useEffect(() => {
         // Navigate immediately if the timer is already 0
         if (secondsRemaining === 0) {
-            navigate('/rules');
+            navigate('/about2');
             return;
         }
 

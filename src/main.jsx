@@ -8,6 +8,11 @@ import About from './pages/About.jsx'
 import Round1final from './pages/Round1final.jsx'
 import Round1result from './pages/Round1result.jsx'
 import Round3 from './pages/Round3.jsx'
+import First from './pages/round-two/ques1/firstques.jsx'
+import About2 from './pages/About_round_two.jsx'
+import About3 from './pages/About_round_three.jsx'
+import Second from './pages/round-two/ques2/secondques.jsx';
+import Admin from './pages/Admin.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,7 +33,27 @@ const router = createBrowserRouter([
   {
     path:"/round3",
     element:<Round3/>
-  }
+  },
+  {
+    path: "/ques-one",
+    element: <First/>,
+  },
+  {
+    path: "/ques-two",
+    element: <Second/>,
+  },
+  {
+    path: "/admin",
+    element: <Admin />,
+  },
+  {
+    path: "/about2",
+    element: <About2 />,
+  },
+  {
+    path: "/about3",
+    element: <About3 />,
+  },
 ]);
 
 createRoot(document.getElementById('root')).render(

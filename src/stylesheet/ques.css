@@ -1,0 +1,45 @@
+.ques
+{
+    box-sizing: border-box;
+    border:2px solid white;
+    height:25vh;
+    font-size: 1em;
+    width:50vw;
+    position: absolute;
+    top:20vh;
+    left:25vw;
+    padding:5vh;
+    box-shadow: 0px 0px 10px white;
+}
+.submit
+{
+    background-color: rgba(253, 17, 17, 0.908);
+    color: rgb(238, 237, 238);
+    box-sizing: border-box;
+    border:2px solid white;
+    height:10vh;
+    font-size: 1em;
+    width:15vw;
+    position: absolute;
+    top:8vh;
+    border-radius: 30px;
+    left:60vw;
+    padding:1vh;
+    box-shadow: 3px 3px 3px white;
+    
+}
+.submit-two
+{ background-color: rgba(253, 17, 17, 0.908);
+    color: rgb(238, 237, 238);
+    box-sizing: border-box;
+    border:2px solid white;
+    height:10vh;
+    font-size: 1em;
+    width:15vw;
+    position: absolute;
+    top:8vh;
+    border-radius: 30px;
+    left:60vw;
+    padding:1vh;
+    box-shadow: 3px 3px 3px white;
+}
