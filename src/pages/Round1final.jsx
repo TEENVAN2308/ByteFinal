@@ -18,7 +18,7 @@ function Round1final() {
     const [answeredQuestions, setAnsweredQuestions] = useState({}); // Track answered questions
     const [secondsRemaining, setSecondsRemaining] = useState(() => {
         const storedTime = window.localStorage.getItem("timer");
-        return storedTime ? JSON.parse(storedTime) : 20;
+        return storedTime ? JSON.parse(storedTime) : 2000;
     });
 
     const [isTimerRunning, setIsTimerRunning] = useState(true);
@@ -141,7 +141,7 @@ function Round1final() {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -217,6 +217,15 @@ function Round1final() {
                         </div>
 
                     </div>
+                    <div className="slider-controler">
+                            <div className="swiper-button-prev slider-arrow">
+                                <ion-icon name="arrow-back-outline"></ion-icon>
+                            </div>
+                            <div className="swiper-button-next slider-arrow">
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </div>
+                            <div className="swiper-pagination"></div>
+                        </div>
                     </Base>
 
                     <Swiper
@@ -246,6 +255,9 @@ function Round1final() {
                         modules={[EffectCoverflow, Pagination, Navigation]}
                         className="swiper_container"
                     >
+                    {/* swiper buttons */}
+                    
+                        {/* swiper buttons */}
                         {data.map((questionData, index) => (
                             <SwiperSlide key={index} className="swiper-slide">
                                 <QuestionCard
@@ -260,15 +272,7 @@ function Round1final() {
                             </SwiperSlide>
                         ))}
 
-                        <div className="slider-controler">
-                            <div className="swiper-button-prev slider-arrow">
-                                <ion-icon name="arrow-back-outline"></ion-icon>
-                            </div>
-                            <div className="swiper-button-next slider-arrow">
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                            </div>
-                            <div className="swiper-pagination"></div>
-                        </div>
+                        
                     </Swiper>
                 </div>
 

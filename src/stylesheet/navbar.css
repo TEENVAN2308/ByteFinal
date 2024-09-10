@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #36454F; /* Charcoal grey background */
+    background-color: #36454f45; /* Charcoal grey background */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Black shadow */
     padding: 10px 20px;
     border-radius: 30px;
@@ -24,7 +24,7 @@
   }
   .right img{
     width:8vw; /* Adjust this as needed */
-    height: 10vh; /* Adjust this as needed */
+    height: 15vh; /* Adjust this as needed */
     background-color: transparent; /* Placeholder for the logo */
   }
   

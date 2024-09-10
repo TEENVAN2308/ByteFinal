@@ -12,7 +12,7 @@ const Second = () => {
       <ChakraProvider theme={theme}>
         <Navbar />
         <Two />
-        <Box w="80%" minH="90vh" bg="#0f0a19" top="50vh" left="10vw" position="absolute" color="gray.500" px={5} py={8}>
+        <Box w="80%" minH="90vh" bg="#0f0a19a6" top="50vh" left="10vw" position="absolute" color="gray.500" px={5} py={8}>
           <CodeEditor />
         </Box>
       </ChakraProvider>

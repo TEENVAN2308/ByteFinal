@@ -39,7 +39,7 @@ function QuestionCard(props) {
                             checked={selectedOption === props.option1}
                             onChange={handleOptionChange}
                         />
-                        <label htmlFor={`option1-${props.questionNumber}`}>{props.option1}</label>
+                        <label htmlFor={`option1-${props.questionNumber}`}>1: {props.option1}</label>
                     </li>
                 )}
                 {props.option2 && (
@@ -52,7 +52,7 @@ function QuestionCard(props) {
                             checked={selectedOption === props.option2}
                             onChange={handleOptionChange}
                         />
-                        <label htmlFor={`option2-${props.questionNumber}`}>{props.option2}</label>
+                        <label htmlFor={`option2-${props.questionNumber}`}>2: {props.option2}</label>
                     </li>
                 )}
                 {props.option3 && (
@@ -65,7 +65,7 @@ function QuestionCard(props) {
                             checked={selectedOption === props.option3}
                             onChange={handleOptionChange}
                         />
-                        <label htmlFor={`option3-${props.questionNumber}`}>{props.option3}</label>
+                        <label htmlFor={`option3-${props.questionNumber}`}>3: {props.option3}</label>
                     </li>
                 )}
                 {props.option4 && (
@@ -78,7 +78,7 @@ function QuestionCard(props) {
                             checked={selectedOption === props.option4}
                             onChange={handleOptionChange}
                         />
-                        <label htmlFor={`option4-${props.questionNumber}`}>{props.option4}</label>
+                        <label htmlFor={`option4-${props.questionNumber}`}>4: {props.option4}</label>
                     </li>
                 )}
             </ul>

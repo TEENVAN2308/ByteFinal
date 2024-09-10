@@ -9,7 +9,7 @@ function About2() {
             <Base>
            
             <div className="about-box2 mt-3">
-                    <h2 style={{ fontSize: '5rem', marginTop: '3rem' }}>Phase 2: Competitive Coding Roundd</h2>
+                    <h2 style={{ fontSize: '5rem', marginTop: '3rem' }}>Phase 2: Competitive Coding Round</h2>
                     <p className='mt-4' style={{ fontSize: '2rem', marginTop: '3rem' }}>1.The second round is a logic-based case study coding challenge designed to assess participant’s logic-building skills.
                     </p>
                     <p className='mt-3' style={{ fontSize: '2rem', marginTop: '3rem' }}>2.This round will consist 2 case-study based questions, to be solved within 30 minutes..</p>

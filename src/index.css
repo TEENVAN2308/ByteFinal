@@ -1,15 +1,13 @@
-/* body
-{
-  background: linear-gradient(to left,#e66465, #0e123c);
-} */
+
 
 body {
-  background: linear-gradient(to right, #03193a, rgb(22, 80, 160));
+  background: linear-gradient(to right, #27c75fcb, rgb(86, 143, 223));
   overflow-x: hidden;
 }
 
 html {
-  background: linear-gradient(to right, #03193a, rgb(22, 80, 160));
+  /* background: linear-gradient(to right, #03193a, rgb(22, 80, 160)); */
+  /* background: linear-gradient(to right, #27c75fcb, rgb(86, 143, 223)); */
   font-size: 62.5%;
   scroll-behavior: smooth;
 }

@@ -8,7 +8,7 @@
 } */
 
 .card {
-    background-color: rgba(255, 255, 255, 0.0); /* Set a transparent background */
+    background-color: rgba(63, 94, 99, 0.959);
     border-radius: 12px;
     padding: 20px;
     width: 550px;
@@ -64,3 +64,8 @@
     background: linear-gradient(to right, #00b09b, #96c93d); /* Green linear gradient */
     color: white;
 }
+
+.flashcard.zoomed {
+    transform: scale(1.5); /* Scale to zoom in */
+    z-index: 10; /* Ensure the flashcard is on top when zoomed */
+  }
