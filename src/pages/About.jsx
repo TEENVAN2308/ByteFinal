@@ -23,7 +23,7 @@ function About() {
 
                 <div className="about-box3 ">
                     <Link to="/" className='btn btn-warning' style={{ fontSize: '2rem' }}>Go Back</Link>
-                    <Link to="/round1" className='btn btn-success' style={{ fontSize: '2rem' }}>Round 1</Link>
+                    <Link to="/round1new" className='btn btn-success' style={{ fontSize: '2rem' }}>Round 1</Link>
                 </div>
 
             </Base>

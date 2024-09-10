@@ -13,6 +13,7 @@ import About2 from './pages/About_round_two.jsx'
 import About3 from './pages/About_round_three.jsx'
 import Second from './pages/round-two/ques2/secondques.jsx';
 import Admin from './pages/Admin.jsx';
+import Round1 from './pages/Round1/Round1.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path:"/round1",
     element:<Round1final/>
+  },
+  {
+    path:"/round1new",
+    element:<Round1/>
   },
   {
     path:"/round1result",
