@@ -5,16 +5,6 @@ export const LANGUAGE_VERSIONS = {
   cpp:"10.2.0",
   c:"10.2.0",
 };
-export const HIDDEN_LINES = {
-  javascript:[1,2,3],  // Hide the greet("Alex"); line for JavaScript
-  python: [],      // Hide the greet("Alex") line for Python
-  java: [],        // Hide the main function's output for Java
-  cpp: [],         // Hide the cout line for C++
-  c: [],           // Hide the printf("Hello World") line for C
-};
-
-// 
-// 
 
 
 export const CODE_SNIPPETS = {

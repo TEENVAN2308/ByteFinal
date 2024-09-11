@@ -2,7 +2,7 @@ import React from 'react'
 import "../../../stylesheet/ques.css"
 import { useNavigate } from 'react-router-dom';
 
-const Submit = (output) => {
+const Submit = ({ sourceCodeSend, language }) => {
     const navigate = useNavigate();
 
     const handleSubmit_two = async () => {
@@ -17,7 +17,8 @@ const Submit = (output) => {
     };
         //ye hai sendback function
         const sendtobacks = async () => {
-            console.log("Output", output);  
+            const questionId=localStorage.getItem("questionId");
+            const teamName=localStorage.getItem("teamName");
             try {
                 const response = await fetch('http://localhost:5000/api/compile/compile', {
                     method: 'POST',
@@ -25,8 +26,10 @@ const Submit = (output) => {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        outputs: output,
-                        teamName: localStorage.getItem("teamName"),
+                    code: sourceCodeSend,
+                    teamName:teamName ,
+                    language:language,
+                    questionId:questionId,
                     }),
                 }).then((response) => response.json())
                     .then((json) => console.log(json));

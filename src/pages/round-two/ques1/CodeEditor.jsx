@@ -5,7 +5,7 @@ import LanguageSelector from "./LanguageSelector";
 import { CODE_SNIPPETS } from "./constants";
 import Output from "./Output";
 import { HIDDEN_LINES } from "./constants";
-
+import Submit from "./submit_one";
 
 const CodeEditor = () => {
   const editorRef = useRef();
@@ -44,6 +44,7 @@ const CodeEditor = () => {
           />
         </Box>
         <Output editorRef={editorRef} language={language} />
+        <Submit sourceCode={editorRef} language={language} />
       </HStack>
     </Box>
   );

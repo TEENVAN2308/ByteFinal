@@ -2,9 +2,9 @@ import React from 'react'
 import "../../../stylesheet/ques.css";
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-const Submit = (output) => {
+const Submit = ({sourceCode,language, questions}) => {
     const navigate = useNavigate();
-
+  
     const handleSubmit = async () => {
         const confirmed = window.confirm("Are you sure you want to submit? You cannot resubmit again!");
         if (confirmed) {
@@ -14,16 +14,22 @@ const Submit = (output) => {
     };
     //ye hai sendback function
     const sendtobacks = async () => {
-        
+        const sourceCodeSend=sourceCode.current.getValue();
+        const teamName=localStorage.getItem("teamName");
+        console.log("sourceCode",sourceCodeSend);
+        console.log("language",language);
+        console.log()
         try {
-            const response = await fetch('http://localhost:5000/api/compile/compile', {
+            const response = await fetch('http://localhost:3000/api/questions/submit-code', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    outputs: output,
-                    teamName: localStorage.getItem("teamName"),
+                    teamName:teamName ,
+                    questionId:1,
+                    code: sourceCodeSend,
+                    language:language,
                 }),
             }).then((response) => response.json())
                 .then((json) => console.log(json));

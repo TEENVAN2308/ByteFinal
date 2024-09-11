@@ -2,7 +2,7 @@ export const postTeam = async (teamName) => {
     try {
         console.log("teamName in postTeam function", teamName)
         //put your api here to post 
-        const response = await fetch('http://localhost:5000/api/team/register',
+        const response = await fetch('http://localhost:3000/api/teams',
              {
             method: 'POST',
             headers: {

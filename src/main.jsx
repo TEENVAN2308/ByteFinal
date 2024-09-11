@@ -5,7 +5,7 @@ import './index.css'
 import Homepage from './pages/HomePage.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/About.jsx'
-import Round1final from './pages/Round1final.jsx'
+import Round1 from './pages/round-one/Round1New.jsx'
 import Round1result from './pages/Round1result.jsx'
 import Round3 from './pages/Round3.jsx'
 import First from './pages/round-two/ques1/firstques.jsx'
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path:"/round1",
-    element:<Round1final/>
+    element:<Round1/>
   },
   {
     path:"/round1result",

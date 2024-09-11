@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { sortArrayOfObjects } from "../../../utils/helpers"
-
+import './res.css';
 
 
 const ResultsFull = ({ teams, onClickHandler }) =>{

@@ -1,0 +1,128 @@
+/* Global container for the results page */
+#resultsContainer {
+    margin-left: 10rem;
+    margin-top: 2rem;
+  }
+  
+  .back-btn {
+    cursor: pointer;
+    color: #8a2be2; /* Violet color for the back button */
+    font-size: 2rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .back-btn:hover {
+    color: #53d3a4; /* Lighter green hover effect */
+  }
+  
+  .team-container,
+  .answer-container {
+    background-color: #1f1f1f; /* Dark background */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .team-container:hover,
+  .answer-container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    background-color: #333; /* Darker background on hover */
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-lg {
+    font-size: 1.125rem;
+  }
+  
+  .text-md {
+    font-size: 1rem;
+  }
+  
+  .text-green-500,
+  .text-green-400 {
+    color: #53d3a4; /* Lighter green */
+  }
+  
+  .text-yellow-400 {
+    color: #fcd34d; /* Yellow */
+  }
+  
+  .text-violet-300 {
+    color: #8a2be2; /* Violet */
+  }
+  
+  .picked-answer {
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .bg-green-500 {
+    background-color: #53d3a4;
+  }
+  
+  .bg-red-500 {
+    background-color: #ef4444; /* Red */
+  }
+  
+  .bg-yellow-400 {
+    background-color: #fcd34d;
+  }
+  
+  .ml-5 {
+    margin-left: 1.25rem;
+  }
+  
+  .mt-3 {
+    margin-top: 0.75rem;
+  }
+  
+  .my-3 {
+    margin: 0.75rem 0;
+  }
+  
+  .mr-5 {
+    margin-right: 1.25rem;
+  }
+  
+  .hr {
+    border-color: #444; /* Darker border color for dividers */
+  }
+  
+  pre.text-allow-whitespace {
+    white-space: pre-wrap; /* Ensure long questions or options are wrapped */
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    #resultsContainer {
+      margin-left: 2rem;
+    }
+  
+    .team-container,
+    .answer-container {
+      width: 100%;
+    }
+  
+    .back-btn {
+      font-size: 1.5rem;
+    }
+  
+    .text-4xl {
+      font-size: 2rem;
+    }
+  
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+  }
+  

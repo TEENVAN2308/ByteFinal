@@ -1,0 +1,51 @@
+/* AdminPanel.css */
+
+#menuContainer {
+    margin-top: 5rem; /* mt-20 equivalent */
+    margin-left: 10rem; /* ml-40 equivalent */
+    text-align: center; /* Centering content */
+  }
+  
+  h3 {
+    margin-bottom: 2rem;
+  }
+  
+  .admin-buttons {
+    width: 75%; /* w-3/4 equivalent */
+    padding: 1rem; /* p-4 equivalent */
+    font-size: 1.875rem; /* text-3xl equivalent */
+    border: none;
+    border-radius: 0.5rem; /* Optional: Add a bit of border-radius */
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .admin-buttons:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  .bg-red-500 {
+    background-color: #f56565;
+  }
+  
+  .bg-violet-500 {
+    background-color: #7c3aed;
+  }
+  
+  .text-yellow-500 {
+    color: #ecc94b;
+  }
+  
+  .text-6xl {
+    font-size: 4rem; /* For larger heading */
+  }
+  
+  .text-5xl {
+    font-size: 3rem; /* For smaller heading */
+  }
+  
+  .mt-5 {
+    margin-top: 1.25rem;
+  }
+  

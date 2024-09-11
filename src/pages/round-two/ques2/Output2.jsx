@@ -8,9 +8,10 @@ const Output = ({ editorRef, language }) => {
   const [output, setOutput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-
+  const [sourceCodeSend, setSourceCodeSend] = useState("");
   const runCode = async () => {
     const sourceCode = editorRef.current.getValue();
+    setSourceCodeSend(sourceCode);
     if (!sourceCode) return;
     try {
       setIsLoading(true);
@@ -60,7 +61,7 @@ const Output = ({ editorRef, language }) => {
           ? output.map((line, i) => <Text key={i}>{line}</Text>)
           : 'Click "Run Code" to see the output here'}
       </Box>
-      <Submit output={output}/>
+      <Submit  sourceCode={sourceCodeSend} language={language}/>
     </Box>
   );
 };
