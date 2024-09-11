@@ -5,7 +5,7 @@ import LanguageSelector from "./LanguageSelector2";
 import { CODE_SNIPPETS } from "./constants";
 import Output from "./Output2";
 import  "../../../stylesheet/hidecode.css";
-
+import Submit from "./submit_two";
 const CodeEditor = () => {
   const editorRef = useRef();
   const [value, setValue] = useState("");
@@ -45,6 +45,7 @@ const CodeEditor = () => {
           />
         </Box>
         <Output editorRef={editorRef} language={language} />
+        <Submit sourceCode={editorRef} language={language} />
       </HStack>
     </Box>
   );

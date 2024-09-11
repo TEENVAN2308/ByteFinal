@@ -14,11 +14,9 @@ const Submit = ({sourceCode,language, questions}) => {
     };
     //ye hai sendback function
     const sendtobacks = async () => {
+        const questionId=localStorage.getItem("r2q1");
         const sourceCodeSend=sourceCode.current.getValue();
         const teamName=localStorage.getItem("teamName");
-        console.log("sourceCode",sourceCodeSend);
-        console.log("language",language);
-        console.log()
         try {
             const response = await fetch('http://localhost:3000/api/questions/submit-code', {
                 method: 'POST',
@@ -27,18 +25,18 @@ const Submit = ({sourceCode,language, questions}) => {
                 },
                 body: JSON.stringify({
                     teamName:teamName ,
-                    questionId:1,
+                    questionId,
                     code: sourceCodeSend,
                     language:language,
                 }),
             }).then((response) => response.json())
                 .then((json) => console.log(json));
-            if (response.ok) {
-                const result = await response.json();
-                console.log('Data successfully sent!', result); // Success
-            } else {
-                console.error('Error sending data:', response.statusText); // Handle errors
-            }
+            // if (response.ok) {
+            //     const result = await response.json();
+            //     console.log('Data successfully sent!', result); // Success
+            // } else {
+            //     console.error('Error sending data:', response.statusText); // Handle errors
+            // }
         } catch (error) {
             console.error('Network error:', error); // Handle network errors
         }

@@ -7,12 +7,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/About.jsx'
 import Round1 from './pages/round-one/Round1New.jsx'
 import Round1result from './pages/Round1result.jsx'
-import Round3 from './pages/Round3.jsx'
 import First from './pages/round-two/ques1/firstques.jsx'
 import About2 from './pages/About_round_two.jsx'
 import About3 from './pages/About_round_three.jsx'
 import Second from './pages/round-two/ques2/secondques.jsx';
 import Admin from './pages/Admin.jsx';
+import Round3 from './pages/Round3.jsx'
+
 const router = createBrowserRouter([
   {
     path: "/",

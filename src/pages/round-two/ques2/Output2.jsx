@@ -61,7 +61,6 @@ const Output = ({ editorRef, language }) => {
           ? output.map((line, i) => <Text key={i}>{line}</Text>)
           : 'Click "Run Code" to see the output here'}
       </Box>
-      <Submit  sourceCode={sourceCodeSend} language={language}/>
     </Box>
   );
 };
