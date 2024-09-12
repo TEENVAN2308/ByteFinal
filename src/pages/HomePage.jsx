@@ -13,11 +13,14 @@ function Home() {
 
     const handleClick = async () => {
         try {
-            // Call your API request here
-            await handleTeamSubmit();
-
+            const teamName = document.getElementById("team").value;
+            if(teamName) {
+                await handleTeamSubmit();
+                navigate('/rules'); 
+            } else {
+                alert("Please Fill The Team Name!")
+            }
             // After successful request, redirect to /rules
-            navigate('/rules');
         } catch (error) {
             console.error('Error submitting team:', error);
         }
