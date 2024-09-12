@@ -127,9 +127,9 @@ function Round1() {
         {questions.length > 0 ? (
           <>
             <div className="question-section">
-              <h2>Question {currentQuestion + 1}</h2>
+              <h2 >Question {currentQuestion + 1}</h2>
               <p>{questions[currentQuestion].question}</p>
-              <div className="options">
+              <div className="options" style={{margin:'6rem'}}>
                 {questions[currentQuestion].choices.map((choice, index) => (
                   <button
                     key={index}
@@ -160,7 +160,7 @@ function Round1() {
               <div className="timer">
                 Time Left: <div className="timer-time">{formatTime(timeLeft)}</div>
               </div>
-              <div className="question-navigator">
+              <div className="question-navigator" style={{borderRadius:'50%'}}>
                 {questions.map((q, index) => (
                   <button
                     key={q._id}
@@ -175,7 +175,7 @@ function Round1() {
                   </button>
                 ))}
               </div>
-              <button className="submit-button" onClick={handleSubmit} disabled={isTimeUp}>
+              <button style={{marginTop:'8rem'}} className="submit-button" onClick={handleSubmit} disabled={isTimeUp}>
                 Submit
               </button>
             </div>
