@@ -5,12 +5,10 @@
 } */
 
 .about-box2{
-    position: absolute;
-    top:10vh;
     color:  white;
     padding-left: 4rem;
     padding-right: 4rem;
-    padding-top: 10rem;
+    padding-top: 15rem;
 }
 
 .about-box3{
