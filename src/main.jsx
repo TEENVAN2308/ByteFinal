@@ -7,7 +7,7 @@ import Homepage from './pages/HomePage.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/About.jsx'
 import Round1 from './pages/round-one/Round1New.jsx'
-import Round1result from './pages/Round1result.jsx'
+import Round2end from './pages/round-two/round2end.jsx'
 import First from './pages/round-two/ques1/firstques.jsx'
 import About2 from './pages/About_round_two.jsx'
 import About3 from './pages/About_round_three.jsx'
@@ -15,7 +15,7 @@ import Second from './pages/round-two/ques2/secondques.jsx';
 import Admin from './pages/Admin.jsx';
 import Round3 from './pages/Round3.jsx'
 import Result from './pages/admin/newViewrResult/viewResult.jsx'
-
+import Round1result from './pages/round-one/round1end.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,10 +29,10 @@ const router = createBrowserRouter([
     path:"/round1",
     element:<Round1/>
   },
-  {
-    path:"/round1result",
-    element:<Round1result/>
-  },
+  // {
+  //   path:"/round1result",
+  //   element:<Round1result/>
+  // },
   {
     path:"/round3",
     element:<Round3/>
@@ -60,6 +60,14 @@ const router = createBrowserRouter([
   {
     path: "/viewRes",
     element: <Result />,
+  },
+  {
+    path: "/round1end",
+    element: <Round1result />,
+  },
+  {
+    path: "/round2end",
+    element: <Round2end />,
   },
 ]);
 

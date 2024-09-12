@@ -10,7 +10,7 @@ function Round1() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [answeredQuestions, setAnsweredQuestions] = useState({});
-  const [timeLeft, setTimeLeft] = useState(1800); // 20 seconds for testing purposes
+  const [timeLeft, setTimeLeft] = useState(1800); 
   const [isTimeUp, setIsTimeUp] = useState(false);
   const [modalTimeLeft, setModalTimeLeft] = useState(3);
 
@@ -106,7 +106,7 @@ function Round1() {
       if (response.ok) {
         localStorage.setItem('round1Completed', 'true');
         localStorage.setItem('round1CompletedAt', Date.now().toString());
-        navigate('/about2');
+        navigate('/round1end');//////////////////
       } else {
         console.error('Failed to submit answers.');
       }
