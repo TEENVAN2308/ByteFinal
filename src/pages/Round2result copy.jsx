@@ -3,24 +3,24 @@ import Base from '../components/base';
 // import React from 'react';
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import { React, useEffect, useState } from "react";
-function Round1result() {
+function Round2result() {
     const navigate = useNavigate();
     const [secondsRemaining, setSecondsRemaining] = useState(() => {
-        const storedTime = window.localStorage.getItem("round1ResultTimer");
+        const storedTime = window.localStorage.getItem("round2ResultTimer");
         return storedTime ? JSON.parse(storedTime) : 1200;
     });
 
     const [isTimerRunning, setIsTimerRunning] = useState(true);
 
     useEffect(() => {
-        window.localStorage.setItem("round1ResultTimer", JSON.stringify(secondsRemaining));
+        window.localStorage.setItem("round2ResultTimer", JSON.stringify(secondsRemaining));
     }, [secondsRemaining]);
 
 
     useEffect(() => {
         // Navigate immediately if the timer is already 0
         if (secondsRemaining === 0) {
-            navigate('/about2');
+            navigate('/about3');
             return;
         }
 
@@ -56,7 +56,7 @@ function Round1result() {
                 <div className="round1resultMainBox mt-3">
                     <div className="round1resultTimer shadow-lg" style={{ marginTop:'15rem', color:'white' }}>
                         <h1 style={{color:"red", fontSize:'7rem'}}>{formatTime(secondsRemaining)}</h1>
-                        <h1 style={{fontFamily:"sans-serif"}}>ROUND 2 WILL START IN</h1>
+                        <h1 style={{fontFamily:"sans-serif"}}>ROUND 3 WILL START IN</h1>
                     </div>
                     {/* <div className="round1YourResult" style={{color:"white"}}>
                         <h1>your result</h1>
@@ -76,4 +76,4 @@ function Round1result() {
     );
 }
 
-export default Round1result;
+export default Round2result;

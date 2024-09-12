@@ -15,6 +15,7 @@ import Second from './pages/round-two/ques2/secondques.jsx';
 import Admin from './pages/Admin.jsx';
 import Round3 from './pages/Round3.jsx'
 import Result from './pages/admin/newViewrResult/viewResult.jsx'
+import Round2result from './pages/Round2result copy.jsx'
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
     path: "/viewRes",
     element: <Result />,
   },
+  {
+    path:'/round2Result',
+    element:<Round2result/>
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(

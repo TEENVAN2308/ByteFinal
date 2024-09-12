@@ -11,7 +11,7 @@ const Submit = ({ sourceCode, language }) => {
         const confirmed = window.confirm("Are you sure you want to submit? You cannot resubmit again!");
 
         if (confirmed) {
-            navigate("/about3");
+            navigate("/round2Result");
             sendtobacks();
         }
     };
