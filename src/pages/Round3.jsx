@@ -57,6 +57,8 @@ function Round3() {
         localStorage.removeItem("round1Completed");
         localStorage.removeItem("round1CompletedAt");
         localStorage.removeItem("round3FlipedItem");
+        localStorage.removeItem("round1ResultTimer");
+        localStorage.removeItem("round2ResultTimer");
         
     };
 

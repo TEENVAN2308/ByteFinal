@@ -44,7 +44,7 @@ const Submit = ({sourceCode,language, questions}) => {
 
 
     return (
-        <button type='submit' onClick={handleSubmit} className='submit'>submit</button>
+        <button type='submit' onClick={handleSubmit} className='submit'>Submit</button>
     );
 }
 

@@ -47,7 +47,7 @@ const Submit = ({ sourceCode, language }) => {
 
 
     return (
-        <button type='submit' onClick={handleSubmit_two} className='submit-two'>submit-two</button>
+        <button type='submit' onClick={handleSubmit_two} className='submit-two'>Submit</button>
     )
 };
 export default Submit;

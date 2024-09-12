@@ -7,7 +7,7 @@ function Round1result() {
     const navigate = useNavigate();
     const [secondsRemaining, setSecondsRemaining] = useState(() => {
         const storedTime = window.localStorage.getItem("round1ResultTimer");
-        return storedTime ? JSON.parse(storedTime) : 10;
+        return storedTime ? JSON.parse(storedTime) : 900;
     });
 
     const [isTimerRunning, setIsTimerRunning] = useState(true);
@@ -55,7 +55,7 @@ function Round1result() {
             <Base>
                 <div className="round1resultMainBox mt-3">
                     <div className="round1resultTimer shadow-lg" style={{ marginTop:'15rem', color:'white' }}>
-                        <h1 style={{color:"blue", fontSize:'7rem'}}>{formatTime(secondsRemaining)}</h1>
+                        <h1 style={{color:"white", fontSize:'7rem'}}>{formatTime(secondsRemaining)}</h1>
                         <h1 style={{fontFamily:"sans-serif"}}>ROUND 2 WILL START IN</h1>
                     </div>
                     {/* <div className="round1YourResult" style={{color:"white"}}>

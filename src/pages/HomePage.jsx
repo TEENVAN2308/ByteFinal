@@ -78,14 +78,14 @@ function Home() {
                         <div className={classes.homecodexlogo}></div>
                         {/* <div className={classes.onelogo}></div> */}
                     </div>
-                    {/* <div className={classes.mainInner2}>
+                    <div className={classes.mainInner2}>
                         <div className="admin" >
                             <Link className='admin-button' to={'/admin'}>
                                 <img src={adminlogo} style={{ margin: '2rem' }} height={"50px"} width={"50px"} alt="" />
                                 
                             </Link>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
 
             </div>

@@ -13,8 +13,8 @@ function About2() {
                     <p className='mt-4' style={{ fontSize: '2rem', marginTop: '3rem' }}>1.The second round is a logic-based case study coding challenge designed to assess participant’s logic-building skills.
                     </p>
                     <p className='mt-3' style={{ fontSize: '2rem', marginTop: '3rem' }}>2.This round will consist 2 case-study based questions, to be solved within 30 minutes..</p>
-                    <h2 className='mt-3' style={{ fontSize: '2rem', marginTop: '3rem' }}>3:Each question will be worth 30 points, with 10 points allocated for task completion and 10 points for code efficiency adn 10 for algorithm approach.</h2>
-                    <p className='mt-4' style={{ fontSize: '2rem', marginTop: '3rem' }}>4:The top 5 teams will qualify for the next phase</p>
+                    <h2 className='mt-3' style={{ fontSize: '2rem', marginTop: '3rem' }}>3:Each question will be worth 30 points, with 10 points allocated for task completion, 10 points for code efficiency and 10 for algorithm approach.</h2>
+                    <p className='mt-4' style={{ fontSize: '2rem', marginTop: '3rem' }}>4:The top 5 teams will qualify for the next phase.</p>
                     {/* <p className='mt-3' style={{ fontSize: '2rem', marginTop: '3rem' }}>5.Only the top 20 teams will qualify for the second round. </p> */}
 
                 </div>
