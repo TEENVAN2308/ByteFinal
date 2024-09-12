@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.pageCover{
+    // background-color: #5c6066;
+    height: 100vh;
+    width: 100vw;
+}
+.box {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    height: 70vh;  /* Reduced by 10vh */
+    width: 75vw;   /* Reduced by 10vw */
+    display: flex;
+}
+
+.box1 {
+    background-color: #26292c78;
+    height: 70vh;  /* Reduced by 10vh */
+    width: 48.5vw; /* Proportional reduction (55/85 * 75) */
+}
+
+.box2 {
+    background-image: url("/src/assets/logo/galaxybackground.png");
+   
+    background-position: center;
+    background-size: cover;
+    height: 70vh;  /* Reduced by 10vh */
+    width: 26.5vw; /* Proportional reduction (30/85 * 75) */
+}
+.mainInner2
+{
+    position:absolute;
+    left:67vw;
+    top:59vh;
+}
+.innerBorder1 {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.426);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("/src/assets/logo/galaxybackground.png");
+    background-position: center;
+    background-size: cover;
+    height: 55vh;  /* Reduced by 10vh */
+    width: 65vw;   /* Reduced by 10vw */
+}
+
+.innerBorder2 {
+    display: flex;
+    height: 47vh;  /* Reduced by 10vh */
+    width: 61vw;   /* Reduced by 10vw */
+    border: 1px solid #26292c81;
+}
+
+.mainInner1 {
+    background-color: #2e333780;
+    height: 47vh;  /* Reduced by 10vh */
+    width: 41.5vw;   /* Reduced proportionally */
+    display: flex;
+}
+
+.byte_title {
+    font-family: "Barlow Condensed";
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    color: white;
+}
+
+.custombtn{
+    background-image: linear-gradient(to right, #0e2fd3, #345d64);
+}
+
+/* new changes */
+
+/* new effects */
+
+.box {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+.box {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+
+.innerBorder1{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards ease-out;
+}
+.innerBorder2{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards ease-in-out;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input {
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 1px solid #e7e8ec;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    width: 15rem;
+}
+
+input::placeholder {
+    color: #badede;
+    opacity: 0.8;
+    font-family: 'Exo 2', sans-serif;
+    
+}
+
+input:focus {
+    border-bottom: 2px solid #0e2fd3;
+}
+
+.byte_title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    color: white;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: revealText 3s ease-in-out forwards;
+}
+
+@keyframes revealText {
+    0% {
+        clip-path: inset(0 100% 0 0); /* Hides the text from the right */
+    }
+    100% {
+        clip-path: inset(0 0 0 0); /* Reveals the text from left to right */
+    }
+}
+
+
+.homecodexlogo {
+    background-image: url("/src/assets/logo/codexLogo_nobg.png");
+    background-position: center;
+   position:absolute;
+   left:20vw;
+   top:1vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: green($color: #000000);
+    height: 30rem;
+    width: 30rem;
+  
+}
+.onelogo {
+    background-image: url("/src/assets/logo/1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color:transparent;
+    height: 30rem;
+    width: 50rem;
+    margin-top: 1rem;
+    margin-right: 3rem;
+    animation: rotateLogo 5s linear infinite ;
+}
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+

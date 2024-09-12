@@ -1,0 +1,118 @@
+@import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
+
+.card {
+  width: 300px;
+  height: 300px;
+  float: left; /* Remove if using Bootstrap grid */
+  perspective: 500px;
+  font-family: 'Lily Script One';
+  margin-bottom: 20px; /* Add spacing between cards */
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Lily Script One';
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.modal {
+  background-color: rgba(27, 229, 247, 0.906);
+
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+.modalss button
+{
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+// .card:hover .content {
+//   transform: rotateY(180deg);
+//   transition: transform 0.5s;
+// }
+
+.content.flipped {
+  transform: rotateY(180deg); /* Rotate card on Y-axis for flip effect */
+}
+
+.front,
+.back {
+  font-family: 'Lily Script One';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  line-height: 300px;
+  color: #03446A;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #03446ab1;
+  color: white;
+  transform: rotateY(180deg);
+  font-size:10px;
+  // 
+  font-family: 'Lily Script One';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  color: #03446A;
+  // text-align: center;
+  border-radius: 5px;
+  border: 2px solid black;
+  backface-visibility: hidden;
+}
+
+
+
+.main_box{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.firstRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    // height: auto;
+    margin: 3rem;
+}
+
+.secondRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+   
+    // height: 200px;
+    margin: 3rem;
+}
+
+.thirdRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    // height: 200px;
+    margin: 3rem;
+}
