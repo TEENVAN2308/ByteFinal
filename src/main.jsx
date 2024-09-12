@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+// import Results from './pages/admin/viewResults/Results.jsx'
 import Homepage from './pages/HomePage.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/About.jsx'
@@ -13,6 +14,7 @@ import About3 from './pages/About_round_three.jsx'
 import Second from './pages/round-two/ques2/secondques.jsx';
 import Admin from './pages/Admin.jsx';
 import Round3 from './pages/Round3.jsx'
+import Result from './pages/admin/newViewrResult/viewResult.jsx'
 
 const router = createBrowserRouter([
   {
@@ -54,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: "/about3",
     element: <About3 />,
+  },
+  {
+    path: "/viewRes",
+    element: <Result />,
   },
 ]);
 

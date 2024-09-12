@@ -12,7 +12,7 @@ const One = () => {
     const fetchQuestion = async () => {
       try {
         const response = await axios.get('http://localhost:3000/api/questions/round2');
-        console.log("response", response.data);
+        // console.log("response", response.data);
 
         // Assuming the response data is an array of questions
         if (response.data.length > 0) {

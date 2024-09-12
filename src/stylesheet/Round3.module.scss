@@ -19,14 +19,17 @@
   transform-style: preserve-3d;
 }
 .modal {
-  background-color: rgb(215, 35, 35);
+  background-color: rgba(27, 229, 247, 0.906);
+
   padding: 2rem;
   border-radius: 10px;
   max-width: 500px;
   margin: auto;
   text-align: center;
 }
-
+.modalss button
+{
+}
 .overlay {
   background-color: rgba(0, 0, 0, 0.75);
   position: fixed;
@@ -60,9 +63,21 @@
 }
 
 .back {
-  background: #03446A;
+  background: #03446ab1;
   color: white;
   transform: rotateY(180deg);
+  font-size:10px;
+  // 
+  font-family: 'Lily Script One';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  color: #03446A;
+  // text-align: center;
+  border-radius: 5px;
+  border: 2px solid black;
+  backface-visibility: hidden;
 }
 
 

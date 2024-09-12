@@ -25,13 +25,13 @@ function Home() {
 
     const handleTeamSubmit = async (event) => {
         const input = document.getElementById("team").value;
-        console.log("Input", input)
+        // console.log("Input", input)
         setTeamName(input);
 
         try {
             await postTeam(input);
             localStorage.setItem("teamName", input);
-            console.log("Team Name", input)
+            // console.log("Team Name", input)
         } catch (error) {
             console.log("Error", error)
         }

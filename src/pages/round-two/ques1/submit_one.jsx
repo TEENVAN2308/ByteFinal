@@ -30,7 +30,7 @@ const Submit = ({sourceCode,language, questions}) => {
                     language:language,
                 }),
             }).then((response) => response.json())
-                .then((json) => console.log(json));
+                // .then((json) => console.log(json));
             // if (response.ok) {
             //     const result = await response.json();
             //     console.log('Data successfully sent!', result); // Success

@@ -51,7 +51,15 @@ function Round3() {
 
     const openVSCode = () => {
         window.location.href = `vscode://file/your-path-to-file-here`;
+        localStorage.removeItem("teamName");
+        localStorage.removeItem("r2q1");
+        localStorage.removeItem("r2q2");
+        localStorage.removeItem("round1Completed");
+        localStorage.removeItem("round1CompletedAt");
+        localStorage.removeItem("round3FlipedItem");
+        
     };
+
 
     return (
         <Base>
@@ -77,10 +85,12 @@ function Round3() {
                 className={classes.modal}
                 overlayClassName={classes.overlay}
             >
-                <h2>{selectedDomain} Question</h2>
-                <p>{question}</p>
-                <button onClick={openVSCode}>Open VS Code</button>
-                <button onClick={closeModal}>Close</button>
+                <div className="modalss">
+                <h1>{selectedDomain} Question</h1>
+                <h2>{question}</h2>
+                <button  style={{marginRight:'3rem',backgroundColor:"black", color:"white"}} className='btn btn-primary' onClick={openVSCode}>Open VS Code</button>
+                <button  style={{marginLeft:'3rem',backgroundColor:"black", color:"white"}} className='btn btn-primary'  onClick={closeModal}>Close</button>
+                </div>
             </Modal>
         </Base>
     );

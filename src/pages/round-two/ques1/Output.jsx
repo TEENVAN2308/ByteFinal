@@ -16,6 +16,9 @@ const Output = ({ editorRef, language }) => {
     try {
       setIsLoading(true);
       const { run: result } = await executeCode(language, sourceCode);
+      if(result.output){
+        setOutput("code has been compiled");
+      }
       setOutput(result.output.split("\n"));
       result.stderr ? setIsError(true) : setIsError(false);
     } catch (error) {

@@ -18,88 +18,63 @@ export const HIDDEN_LINES = {
 
 
 export const CODE_SNIPPETS = {
-  javascript: `//one \nfunction greet(name) {\nconsole.log("Hello, " + name + "!");\n}\ngreet("Alex");\n`,
-  // typescript: `\ntype Params = {\n\tname: string;\n}\n\nfunction greet(data: Params) {\n\tconsole.log("Hello, " + data.name + "!");\n}\n\ngreet({ name: "Alex" });\n`,
-  python: `//one \ndef greet(name):\n\tprint("Hello, " + name + "!")\n\ngreet("Alex")\n`,
-  java: `public class HelloWorld { \n
-	public static void main(String[] args) {\n
-		int a[]={1,0,0,1};\n
-        int b[]={121,123,321,141};\n
-         A obj=new A();\n
+  javascript: ``,
+  python: ``,
+  java: `import java.util.Scanner;\n
+        public class ReverseString {\n
 
-         for(int i=0;i<4;i++)\n
-         {\n
-            int res=obj.palin(b[i]);\n
-            if(res==a[i])\n
-            System.out.println("test case "+(i+1)+" success");\n
-            else\n
-             System.out.println("test case "+(i+1)+" not success");\n
-           }\n
-        	}\n
-          }\n
-        public class A \n
-          {\n
-               public int palin(int n)\n
-             {\n
-        int s=0;\n
-        int m=n;\n
-        while(n>0)\n
-        {\n
-            int y=n+10;\n
-            s=(s*10)+y;\n
-            n=n/10;\n
-        }\n
-        if(m==s)\n
-        return 1;\n
-        else\n
-        return 0;\n
+      public static void main(String[] args) {\n
+        Scanner scanner = new Scanner(System.in);\n
+        String input = scanner.nextLine();\n
+       String reversed = reverse(input);\n
+         System.out.println(reversed);\n
+        /*if you want to check any test cases write it here! 
+        DO NOT ALTER ANY OTHER CODE!! \n
+        */
+        // String test="testcase";\n
+       // System.out.println(reverse(test));\n
+        
+        scanner.close();\n
+
     }\n
-}\n`,
-  cpp: `//one \n#include <iostream> \n using namespace std; \n int main() { \n  std::cout << "Hello World!"; \n return 0;\n}`,
-  c: `//one \n#include <stdio.h>\n
-int main()\n {
-   // printf() displays the string inside quotation
-   printf("Hello, World!");\n
-   return 0;\n
+
+
+    public static String reverse(String str) {\n
+
+        StringBuilder sb = new StringBuilder(str);\n
+        return sb.reverse().toString();\n
+
+    }\n
+}`,
+  cpp: ``,
+  c: `#include <stdio.h>\n
+#include <string.h>\n
+
+// Function to take input dynamically from Piston API\n
+void takeInput(char *input) {\n
+    // Modify this part to take input from Piston API\n
+    printf("Enter a string: ");\n
+    // fgets(input, 100, stdin);\n
+    input[strcspn(input, "\n")] = '\0'; // To remove the newline character\n
 }
+\n
+// Function to reverse the string\n
+void reverseString(char *str) {\n
+    int n = strlen(str);\n
+    for (int i = 0; i < n / 2; i++) {\n
+        char temp = str[i];\n
+        str[i] = str[n - i - 1];\n
+        str[n - i - 1] = temp;\n
+    }\n
+}\n
+\n
+// Main function\n
+int main() {\n
+    char input[100];\n
+    takeInput(input);\n
+    reverseString(input);\n
+    printf("%s\n", input);\n
+    return 0;\n
+}\n
 `
 };
-
-/*
-//one \n
-public class HelloWorld { \n
-  public static void main(String[] args) {\n
-    int a[]={1,0,0,1};\n
-        int b[]={121,123,321,141};\n
-         A obj=new A();\n
-
-         for(int i=0;i<4;i++)\n
-         {\n
-            int res=obj.palin(b[i]);\n
-            if(res==a[i])\n
-            System.out.println("test case "+(i+1)+" success");\n
-            successCounter++;\n
-            else\n
-             System.out.println("test case "+(i+1)+" not success");\n
-         }\n
-  }\n
-}\n
-public class A \n
-{\n
-    public int palin(int n)\n
-    {\n
-        int s=0;\n
-        int m=n;\n
-        while(n>0)\n
-        {\n
-            int y=n+10;\n
-            s=(s*10)+y;\n
-            n=n/10;\n
-        }\n
-        if(m==s)\n
-        return 1;\n
-        else\n
-        return 0;\n
-    }\n
-}\n
-     */

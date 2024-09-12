@@ -91,7 +91,7 @@ function Round1() {
   const handleSubmit = async () => {
     try {
       const teamName = localStorage.getItem('teamName');
-      console.log("Answers", answers)
+      // console.log("Answers", answers)
       const response = await fetch('http://localhost:3000/api/questions/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

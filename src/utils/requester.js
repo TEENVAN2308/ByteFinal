@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const HOST_URI = "http://localhost:5000"
+const HOST_URI = "http://localhost:3000"
 const headers = { 
     'ngrok-skip-browser-warning':true
 }
@@ -17,7 +17,7 @@ export async function getQuestions(){
 
 
 export async function getTeams(){
-    const TEAM_FETCH = 'api/admin/view-result'
+    const TEAM_FETCH = 'api/teams/'
     const ReqURI = `${HOST_URI}/${TEAM_FETCH}`
 
     let response = await axios.get(ReqURI, {headers})
@@ -26,7 +26,7 @@ export async function getTeams(){
 
 
 export async function getAdmins(adminData){
-    const ADMINS_ROUTE = 'api/admin/login'
+    const ADMINS_ROUTE = 'api/teams/login'
     const ReqURI = `${HOST_URI}/${ADMINS_ROUTE}`
 
     let admins = await axios.post(ReqURI, {

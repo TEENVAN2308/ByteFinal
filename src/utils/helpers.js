@@ -11,12 +11,12 @@ export function removeKey(obj, keyToRemove){
 }   
 
 
-export function sortArrayOfObjects(array, key1, key2) {
+export function sortArrayOfObjects(array, key1) {
     return array.sort((a, b) => {
-        if (a[key1] === b[key1]) {
-            // If the values of key1 are the same, sort by key2
-            return a[key2] > b[key2] ? -1 : 1;
-        }
+        // if (a[key1] === b[key1]) {
+        //     // If the values of key1 are the same, sort by key2
+        //     return a[key2] > b[key2] ? -1 : 1;
+        // }
         // Otherwise, sort by key1
         return a[key1] > b[key1] ? -1 : 1;
     });
