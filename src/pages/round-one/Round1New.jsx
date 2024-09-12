@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Round1.css';
@@ -9,7 +10,7 @@ function Round1() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [answeredQuestions, setAnsweredQuestions] = useState({});
-  const [timeLeft, setTimeLeft] = useState(1800); // 20 seconds for testing purposes
+  const [timeLeft, setTimeLeft] = useState(2000); // 20 seconds for testing purposes
   const [isTimeUp, setIsTimeUp] = useState(false);
   const [modalTimeLeft, setModalTimeLeft] = useState(3);
 
@@ -127,9 +128,9 @@ function Round1() {
         {questions.length > 0 ? (
           <>
             <div className="question-section">
-              <h2>Question {currentQuestion + 1}</h2>
+              <h2 >Question {currentQuestion + 1}</h2>
               <p>{questions[currentQuestion].question}</p>
-              <div className="options">
+              <div className="options" style={{margin:'6rem'}}>
                 {questions[currentQuestion].choices.map((choice, index) => (
                   <button
                     key={index}
@@ -160,7 +161,7 @@ function Round1() {
               <div className="timer">
                 Time Left: <div className="timer-time">{formatTime(timeLeft)}</div>
               </div>
-              <div className="question-navigator">
+              <div className="question-navigator" style={{borderRadius:'50%'}}>
                 {questions.map((q, index) => (
                   <button
                     key={q._id}
@@ -175,7 +176,7 @@ function Round1() {
                   </button>
                 ))}
               </div>
-              <button className="submit-button" onClick={handleSubmit} disabled={isTimeUp}>
+              <button style={{marginTop:'8rem'}} className="submit-button" onClick={handleSubmit} disabled={isTimeUp}>
                 Submit
               </button>
             </div>
