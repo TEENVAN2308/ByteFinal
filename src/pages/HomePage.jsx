@@ -76,7 +76,7 @@ function Home() {
 
                         </div>
                         <div className={classes.homecodexlogo}></div>
-                        <div className={classes.onelogo}></div>
+                        {/* <div className={classes.onelogo}></div> */}
                     </div>
                     {/* <div className={classes.mainInner2}>
                         <div className="admin" >
