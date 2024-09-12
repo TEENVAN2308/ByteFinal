@@ -1,7 +1,7 @@
 export const postRound1Questions = async (payload, teamName) => {
     try {
         //put your api here to post 
-        const response = await fetch('http://localhost:5000/api/answers',
+        const response = await fetch('https://byte-0dmt.onrender.com/api/answers',
             {
                 method: 'POST',
                 headers: {

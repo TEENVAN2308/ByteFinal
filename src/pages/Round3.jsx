@@ -26,7 +26,7 @@ function Round3() {
             domain = domain.toLowerCase();
             console.log(domain);
             
-            const response = await axios.get(`http://localhost:3000/api/questions/round3?domain=${domain}`);
+            const response = await axios.get(`https://byte-0dmt.onrender.com/api/questions/round3?domain=${domain}`);
             if (response.status !== 200) {
                 throw new Error('Network response was not ok');
             }
@@ -50,7 +50,7 @@ function Round3() {
     };
 
     const openVSCode = () => {
-        window.location.href = `vscode://file/your-path-to-file-here`;
+        window.location.href = `vscode://`;
         localStorage.removeItem("teamName");
         localStorage.removeItem("r2q1");
         localStorage.removeItem("r2q2");

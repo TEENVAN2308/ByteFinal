@@ -11,7 +11,7 @@ const TeamScores = () => {
   const fetchTeamData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:3000/api/teams'); // Replace with your API URL
+      const response = await axios.get('https://byte-0dmt.onrender.com/api/teams'); // Replace with your API URL
       setTeams(response.data);
       console.log(response.data);
       setLoading(false);

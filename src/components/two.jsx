@@ -11,7 +11,7 @@ const Two = () => {
   useEffect(() => {
     const fetchQuestion = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/questions/round2');
+        const response = await axios.get('https://byte-0dmt.onrender.com/api/questions/round2');
         // console.log("response", response.data);
 
         // Assuming the response data is an array of questions

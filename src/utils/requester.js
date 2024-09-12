@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const HOST_URI = "http://localhost:3000"
+const HOST_URI = "https://byte-0dmt.onrender.com"
 const headers = { 
     'ngrok-skip-browser-warning':true
 }

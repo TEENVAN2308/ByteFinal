@@ -16,7 +16,7 @@ function Round1() {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/questions/round1');
+        const response = await fetch('https://byte-0dmt.onrender.com/api/questions/round1');
         const data = await response.json();
         setQuestions(data);
       } catch (error) {
@@ -92,7 +92,8 @@ function Round1() {
     try {
       const teamName = localStorage.getItem('teamName');
       // console.log("Answers", answers)
-      const response = await fetch('http://localhost:3000/api/questions/submit', {
+
+      const response = await fetch('https://byte-0dmt.onrender.com/api/questions/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -18,7 +18,7 @@ const Submit = ({sourceCode,language, questions}) => {
         const sourceCodeSend=sourceCode.current.getValue();
         const teamName=localStorage.getItem("teamName");
         try {
-            const response = await fetch('http://localhost:3000/api/questions/submit-code', {
+            const response = await fetch('https://byte-0dmt.onrender.com/api/questions/submit-code', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
