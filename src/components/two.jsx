@@ -35,7 +35,7 @@ const Two = () => {
   if (error) return <p>Error loading question: {error.message}</p>;
 
   return (
-    <div style={{ fontSize: '2.2rem' }} className="ques ques-one-box">
+    <div style={{ fontSize: '1.2rem' }} className="ques ques-one-box">
       <h1>Ques-2</h1>
       <p>{questionData ? questionData.question : 'No question data available'}</p>
     </div>
