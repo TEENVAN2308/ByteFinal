@@ -11,7 +11,7 @@ function FlipingCard({ isFlipped, addFlip, disabled, title, question }) {
                         {title}
                     </div>
                 </div>
-                <div className={classes.back}>
+                <div className={classes.back} style={{padding:"10px"}}>
                     {question}
                     
                 </div>

@@ -39,6 +39,7 @@ const One = () => {
       <h1>Ques-1</h1>
       {/* <p><strong>Question ID:</strong> {questionData ? questionData._id : 'No ID available'}</p> */}
       <p>{questionData ? questionData.question : 'No question data available'}</p>
+     
     </div>
   );
 }

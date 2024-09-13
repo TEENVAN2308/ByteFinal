@@ -76,8 +76,11 @@
   color: rgba(208, 79, 79, 0.541);
   transform: rotateY(180deg);
   font-size:10px;
+  overflow-y:scroll ;
+  overflow-x:hidden;
+  padding:20px;
   // 
-  font-family: 'Lily Script One';
+
   position: absolute;
   height: 100%;
   width: 100%;

@@ -7,7 +7,7 @@ function Round2end() {
     const navigate = useNavigate();
     const [secondsRemaining, setSecondsRemaining] = useState(() => {
         const stored2Time = window.localStorage.getItem("round2ResultTimer");
-        return stored2Time ? JSON.parse(stored2Time) : 9;
+        return stored2Time ? JSON.parse(stored2Time) : 1200;
     });
 
     const [isTimerRunning, setIsTimerRunning] = useState(true);

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CustomNavbar from './navbar';
 import "../stylesheet/ques.css";
-
+import starlogo from "./../assets/images/star_pattern.png";
 const Two = () => {
   const [questionData, setQuestionData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -38,6 +38,7 @@ const Two = () => {
     <div style={{ fontSize: '1.2rem' }} className="ques ques-one-box">
       <h1>Ques-2</h1>
       <p>{questionData ? questionData.question : 'No question data available'}</p>
+      <img src={starlogo} alt="" />
     </div>
   );
 }
