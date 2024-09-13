@@ -65,7 +65,7 @@ function Round3() {
     return (
         <Base>
             <div className={`container ${classes.main_box}`} style={{ marginTop: '2rem' }}>
-                <div className={classes.firstRow} style={{ marginTop: '15rem' }}>
+                <div className={classes.firstRow} style={{ marginTop: '25rem' }}>
                     {["Mystery Box 1","Mystery Box 2","Mystery Box 3","Mystery Box 4","Mystery Box 5"].map((card,index) => (
                         <FlipingCard
                             key={index}
