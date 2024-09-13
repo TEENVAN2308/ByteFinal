@@ -35,7 +35,7 @@ const One = () => {
   if (error) return <p>Error loading question: {error.message}</p>;
 
   return (
-    <div style={{ fontSize: '2.2rem' }} className="ques ques-one-box">
+    <div style={{ fontSize: '1.2rem' }} className="ques ques-one-box">
       <h1>Ques-1</h1>
       {/* <p><strong>Question ID:</strong> {questionData ? questionData._id : 'No ID available'}</p> */}
       <p>{questionData ? questionData.question : 'No question data available'}</p>

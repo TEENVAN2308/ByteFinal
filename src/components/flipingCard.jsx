@@ -7,7 +7,7 @@ function FlipingCard({ isFlipped, addFlip, disabled, title, question }) {
             <div className={`${classes.content} ${isFlipped ? classes.flipped : ''}`}>
                 <div className={classes.front}>
                     {/* Display the card title on the front */}
-                    <div className={classes.title}>
+                    <div style={{fontSize:"2em"}} className={classes.title}>
                         {title}
                     </div>
                 </div>

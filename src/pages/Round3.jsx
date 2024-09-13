@@ -15,18 +15,17 @@ function Round3() {
 
     const [question, setQuestion] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedDomain, setSelectedDomain] = useState(""); // Store the selected domain
+    // const [selectedDomain, setSelectedDomain] = useState(""); 
+    // Store the selected domain
 
     useEffect(() => {
         window.localStorage.setItem("round3FlipedItem", JSON.stringify(flippedCardIndex));
     }, [flippedCardIndex]);
 
-    const fetchQuestion = async (domain) => {
+    const fetchQuestion = async () => {
         try {
-            domain = domain.toLowerCase();
-            console.log(domain);
             
-            const response = await axios.get(`https://byte-0dmt.onrender.com/api/questions/round3?domain=${domain}`);
+            const response = await axios.get(`https://byte-0dmt.onrender.com/api/questions/round3`);
             if (response.status !== 200) {
                 throw new Error('Network response was not ok');
             }
@@ -38,10 +37,10 @@ function Round3() {
         }
     };
 
-    const handleFlip = (index, domain) => {
+    const handleFlip = (index) => {
         setFlippedCardIndex(index);
-        setSelectedDomain(domain); // Store the selected domain
-        fetchQuestion(domain); // Fetch the question for the specific domain
+        // setSelectedDomain(domain); // Store the selected domain
+        fetchQuestion(); // Fetch the question for the specific domain
         setIsModalOpen(true); // Open the modal
     };
 
@@ -67,11 +66,11 @@ function Round3() {
         <Base>
             <div className={`container ${classes.main_box}`} style={{ marginTop: '2rem' }}>
                 <div className={classes.firstRow} style={{ marginTop: '15rem' }}>
-                    {['Frontend', 'Backend', 'DevOps'].map((card, index) => (
+                    {["Mystery Box 1","Mystery Box 2","Mystery Box 3","Mystery Box 4","Mystery Box 5"].map((card,index) => (
                         <FlipingCard
                             key={index}
                             isFlipped={flippedCardIndex === index}
-                            addFlip={() => handleFlip(index, card)} // Pass the domain to handleFlip
+                            addFlip={() => handleFlip(index)} // Pass the domain to handleFlip
                             disabled={flippedCardIndex !== null && flippedCardIndex !== index}
                             title={card}
                             question={question} // Pass card title to the FlipingCard component
@@ -88,7 +87,7 @@ function Round3() {
                 overlayClassName={classes.overlay}
             >
                 <div className="modalss">
-                <h1>{selectedDomain} Question</h1>
+                <h1> Question</h1>
                 <h2>{question}</h2>
                 <button  style={{marginRight:'3rem',backgroundColor:"black", color:"white"}} className='btn btn-primary' onClick={openVSCode}>Open VS Code</button>
                 <button  style={{marginLeft:'3rem',backgroundColor:"black", color:"white"}} className='btn btn-primary'  onClick={closeModal}>Close</button>
