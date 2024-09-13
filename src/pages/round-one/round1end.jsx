@@ -7,7 +7,7 @@ function Round1result() {
     const navigate = useNavigate();
     const [secondsRemaining, setSecondsRemaining] = useState(() => {
         const storedTime = window.localStorage.getItem("round1ResultTimer");
-        return storedTime ? JSON.parse(storedTime) : 900;
+        return storedTime ? JSON.parse(storedTime) : 9;
     });
 
     const [isTimerRunning, setIsTimerRunning] = useState(true);
