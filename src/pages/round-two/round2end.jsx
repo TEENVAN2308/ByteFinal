@@ -54,7 +54,7 @@ function Round2end() {
 
             <Base>
                 <div className="round1resultMainBox mt-3">
-                    <div className="round1resultTimer shadow-lg" style={{ marginTop:'15rem', color:'white' }}>
+                    <div className="round1resultTimer shadow-lg" style={{ marginTop:'30rem', color:'white' }}>
                         <h1 style={{color:"white", fontSize:'7rem'}}>{formatTime(secondsRemaining)}</h1>
                         <h1 style={{fontFamily:"sans-serif"}}>ROUND 3 WILL START IN</h1>
                     </div>
