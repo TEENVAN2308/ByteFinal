@@ -18,63 +18,9 @@ export const HIDDEN_LINES = {
 
 
 export const CODE_SNIPPETS = {
-  javascript: ``,
+  javascript: `\n function greet(name) {\n console.log("Hello, " + name + "!");\n}\ngreet("Alex");\n`,
   python: ``,
-  java: `import java.util.Scanner;\n
-        public class ReverseString {\n
-
-      public static void main(String[] args) {\n
-        Scanner scanner = new Scanner(System.in);\n
-        String input = scanner.nextLine();\n
-       String reversed = reverse(input);\n
-         System.out.println(reversed);\n
-        /*if you want to check any test cases write it here! 
-        DO NOT ALTER ANY OTHER CODE!! \n
-        */
-        // String test="testcase";\n
-       // System.out.println(reverse(test));\n
-        
-        scanner.close();\n
-
-    }\n
-
-
-    public static String reverse(String str) {\n
-
-        StringBuilder sb = new StringBuilder(str);\n
-        return sb.reverse().toString();\n
-
-    }\n
-}`,
+  java: ``,
   cpp: ``,
-  c: `#include <stdio.h>\n
-#include <string.h>\n
-
-// Function to take input dynamically from Piston API\n
-void takeInput(char *input) {\n
-    // Modify this part to take input from Piston API\n
-    printf("Enter a string: ");\n
-    // fgets(input, 100, stdin);\n
-    input[strcspn(input, "\n")] = '\0'; // To remove the newline character\n
-}
-\n
-// Function to reverse the string\n
-void reverseString(char *str) {\n
-    int n = strlen(str);\n
-    for (int i = 0; i < n / 2; i++) {\n
-        char temp = str[i];\n
-        str[i] = str[n - i - 1];\n
-        str[n - i - 1] = temp;\n
-    }\n
-}\n
-\n
-// Main function\n
-int main() {\n
-    char input[100];\n
-    takeInput(input);\n
-    reverseString(input);\n
-    printf("%s\n", input);\n
-    return 0;\n
-}\n
-`
+  c: ``,
 };

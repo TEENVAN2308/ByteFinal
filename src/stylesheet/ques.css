@@ -5,6 +5,7 @@
     border-radius: 60px;
     height:25vh;
     font-size: 0.5em;
+    overflow: scroll;
     width:50vw;
     position: absolute;
     top:20vh;
