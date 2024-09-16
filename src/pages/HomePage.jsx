@@ -16,7 +16,7 @@ function Home() {
             const teamName = document.getElementById("team").value;
             if(teamName) {
                 await handleTeamSubmit();
-                navigate('/about3'); 
+                navigate('/rules'); 
             } else {
                 alert("Please Fill The Team Name!")
             }
