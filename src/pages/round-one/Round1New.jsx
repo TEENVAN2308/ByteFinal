@@ -10,7 +10,7 @@ function Round1() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [answeredQuestions, setAnsweredQuestions] = useState({});
-  const [timeLeft, setTimeLeft] = useState(1800); 
+  const [timeLeft, setTimeLeft] = useState(10); 
   const [isTimeUp, setIsTimeUp] = useState(false);
   const [modalTimeLeft, setModalTimeLeft] = useState(3);
 

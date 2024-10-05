@@ -61,7 +61,7 @@ function Home() {
                 <div className={`shadow-lg position-absolute top-50 start-50 translate-middle ${classes.innerBorder2}`}>
                     <div className={classes.mainInner1}>
                         <div className={`mt-5 ms-5 p-5 ps-5 container`} style={{ color: "white" }}>
-                            <h1 className={`pb-3 ${classes.byte_title}`} style={{ fontSize: '6rem' }}>BYTE <p style={{ color: "white", fontSize: '2rem' }}>2024</p> </h1>
+                            <h1 className={`pb-3 ${classes.byte_title}`} style={{ fontSize: '6.5rem' }}>BYTE <p style={{ color: "white", fontSize: '2rem' }}>2024</p> </h1>
 
                             <div className="mb-3">
                                 <div className="mb-3 w-50 inputbox">

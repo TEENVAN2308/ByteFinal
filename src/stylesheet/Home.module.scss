@@ -56,7 +56,7 @@
 }
 
 .byte_title {
-    font-family: "Barlow Condensed";
+    font-family: "Barlow Condensed" !important;
     font-size: 3em;
     letter-spacing: 0.1em;
     color: white;
@@ -146,7 +146,7 @@ input:focus {
 
 
 .homecodexlogo {
-    background-image: url("/src/assets/logo/codexLogo_nobg.png");
+    background-image: url("/src/assets/images/Untitled-video-Made-with-Clipc-unscreen.gif");
     background-position: center;
    position:absolute;
    left:20vw;
