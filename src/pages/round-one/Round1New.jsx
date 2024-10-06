@@ -109,9 +109,11 @@ function Round1() {
         navigate('/round1end');//////////////////
       } else {
         console.error('Failed to submit answers.');
+        navigate('/round1end');
       }
     } catch (error) {
       console.error('Error submitting answers:', error);
+      navigate('/round1end');
     }
   };
 

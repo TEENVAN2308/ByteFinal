@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 // import Results from './pages/admin/viewResults/Results.jsx'
 import Homepage from './pages/HomePage.jsx'
+import AdminLogin from './pages/beforeadmin.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/About.jsx'
 import Round1 from './pages/round-one/Round1New.jsx'
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/rules",
     element: <About/>,
+  },
+  {
+    path: "/badmin",
+    element: <AdminLogin/>,
   },
   {
     path:"/round1",

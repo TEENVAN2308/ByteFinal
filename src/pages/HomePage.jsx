@@ -80,8 +80,8 @@ function Home() {
                     </div>
                     <div className={classes.mainInner2}>
                         <div className="admin" >
-                            <Link className='admin-button' to={'/admin'}>
-                                <img src={adminlogo} style={{ margin: '2rem' }} height={"5px"} width={"5px"} alt="" />
+                            <Link className='admin-button' to={'/badmin'}>
+                                <img src={adminlogo} style={{ margin: '2rem' }} height={"50px"} width={"50px"} alt="" />
                                 
                             </Link>
                         </div>
