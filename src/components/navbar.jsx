@@ -1,7 +1,7 @@
 import React from 'react';
 import '../stylesheet/navbar.css'; // You will define the styles in this CSS file
 import uulogo from '../assets/images/uuFull.png';
-import codexlogo from '../assets/images/codexLogo_nobg.png';
+import codexlogo from '../assets/images/Untitled-video-Made-with-Clipc-unscreen.gif';
 
 const Navbar = () => {
   return (
