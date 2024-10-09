@@ -10,7 +10,7 @@ function Round1() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [answeredQuestions, setAnsweredQuestions] = useState({});
-  const [timeLeft, setTimeLeft] = useState(10); 
+  const [timeLeft, setTimeLeft] = useState(1000); 
   const [isTimeUp, setIsTimeUp] = useState(false);
   const [modalTimeLeft, setModalTimeLeft] = useState(3);
 
@@ -155,7 +155,7 @@ function Round1() {
                   Previous
                 </button>
                 <button className="butt" onClick={handleNext} disabled={currentQuestion === questions.length - 1 || isTimeUp}>
-                  Next
+                   Save & Next
                 </button>
               </div>
             </div>
@@ -179,7 +179,7 @@ function Round1() {
                 ))}
               </div>
               <button style={{marginTop:'8rem'}} className="submit-button" onClick={handleSubmit} disabled={isTimeUp}>
-                Submit
+                Submit Response
               </button>
             </div>
           </>
