@@ -1,13 +1,12 @@
-import '../../stylesheet/round2end.css'
+import { AbsoluteCenter } from '@chakra-ui/react';
 import Base from '../../components/base';
-// import React from 'react';
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import { React, useEffect, useState } from "react";
 function Round2end() {
     const navigate = useNavigate();
     const [secondsRemaining, setSecondsRemaining] = useState(() => {
         const stored2Time = window.localStorage.getItem("round2ResultTimer");
-        return stored2Time ? JSON.parse(stored2Time) : 2;
+        return stored2Time ? JSON.parse(stored2Time) : 20;
     });
 
     const [isTimerRunning, setIsTimerRunning] = useState(true);
@@ -47,26 +46,18 @@ function Round2end() {
         return `${String(minutes).padStart(2, '0')}:${String(secondsPart).padStart(2, '0')}`;
     };
 
-    
+
 
     return (
         <>
-
             <Base>
-                <div className="round1resultMainBox mt-3">
-                    <div className="round1resultTimer shadow-lg" style={{ marginTop:'30rem', color:'white' }}>
-                        <h1 style={{color:"white", fontSize:'7rem'}}>{formatTime(secondsRemaining)}</h1>
-                        <h1 style={{fontFamily:"sans-serif"}}>ROUND 3 WILL START IN</h1>
+                <AbsoluteCenter >
+                    <div className="round1resultMainBox ">
+                        <h2 >ROUND 2 WILL START IN</h2>
+                        <h1 >{formatTime(secondsRemaining)}</h1>
+
                     </div>
-                    {/* <div className="round1YourResult" style={{color:"white"}}>
-                        <h1>your result</h1>
-                    </div> */}
-
-                </div>
-
-
-
-
+                </AbsoluteCenter>
             </Base>
 
 

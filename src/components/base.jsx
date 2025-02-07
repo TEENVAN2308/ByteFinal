@@ -1,7 +1,7 @@
 import React from 'react'
 import CustomNavbar from './navbar';
 
-const Base = ({title="Welcome to my website", children }) => {
+const Base = ({children }) => {
   return (
     <div className="container-fluid">
   

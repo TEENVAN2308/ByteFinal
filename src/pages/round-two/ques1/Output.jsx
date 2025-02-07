@@ -35,8 +35,9 @@ const Output = ({ editorRef, language }) => {
   };
 
   return (
-    <Box w="50%">
-      <Text mb={2} fontSize="lg">
+    <Box w="90vw" mt="10vh">
+      <hr />
+      <Text mb={2} p={10} fontSize="4xl" >
         Output
       </Text>
       <Button
@@ -45,16 +46,21 @@ const Output = ({ editorRef, language }) => {
         mb={4}
         isLoading={isLoading}
         onClick={runCode}
+        fontSize="2xl"
+        padding="20px"
       >
         Run Code
       </Button>
       <Box
         height="75vh"
         p={2}
+        fontSize="2xl"
+        padding="20px"
         color={isError ? "red.400" : ""}
         border="1px solid"
         borderRadius={4}
         borderColor={isError ? "red.500" : "#333"}
+        overflowX="hidden"
       >
         {output
           ? output.map((line, i) => <Text key={i}>{line}</Text>)

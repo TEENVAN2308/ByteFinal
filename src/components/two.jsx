@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Box } from '@chakra-ui/react';
 import CustomNavbar from './navbar';
 import "../stylesheet/ques.css";
 import starlogo from "./../assets/images/star_pattern.png";
@@ -35,11 +36,11 @@ const Two = () => {
   if (error) return <p>Error loading question: {error.message}</p>;
 
   return (
-    <div style={{ fontSize: '1.2rem' }} className="ques ques-one-box">
+    <Box margin={{base:'5',md: '40px',lg:'50px'}}>
       <h1>Ques-2</h1>
       <p>{questionData ? questionData.question : 'No question data available'}</p>
       <img src={starlogo} alt="" />
-    </div>
+    </Box>
   );
 }
 

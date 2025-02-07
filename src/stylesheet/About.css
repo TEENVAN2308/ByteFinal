@@ -6,9 +6,10 @@
 
 .about-box2{
     color:  white;
+    
     padding-left: 4rem;
     padding-right: 4rem;
-    padding-top: 15rem;
+    /* padding-top: 15rem; */
 }
 
 .about-box3{
@@ -16,6 +17,7 @@
     align-items: center;
     justify-content: space-around;
     padding-left: 4rem;
+    padding-bottom:4rem;
     padding-right: 4rem;
     padding-top: 2rem;
     width: 100%;

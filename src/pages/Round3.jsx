@@ -4,7 +4,8 @@ import classes from '../stylesheet/Round3.module.scss';
 import FlipingCard from '../components/flipingCard';
 import Base from '../components/base';
 import axios from 'axios';
-
+import { Text, Flex, Box, Center } from '@chakra-ui/react';
+import { base } from 'framer-motion/client';
 Modal.setAppElement('#root'); // To avoid accessibility warnings
 
 function Round3() {
@@ -24,7 +25,7 @@ function Round3() {
 
     const fetchQuestion = async () => {
         try {
-            
+
             const response = await axios.get(`https://byte-0dmt.onrender.com/api/questions/round3`);
             if (response.status !== 200) {
                 throw new Error('Network response was not ok');
@@ -39,9 +40,8 @@ function Round3() {
 
     const handleFlip = (index) => {
         setFlippedCardIndex(index);
-        // setSelectedDomain(domain); // Store the selected domain
-        fetchQuestion(); // Fetch the question for the specific domain
-        setIsModalOpen(true); // Open the modal
+        fetchQuestion();
+        setIsModalOpen(true);
     };
 
     const closeModal = () => {
@@ -58,39 +58,45 @@ function Round3() {
         localStorage.removeItem("round3FlipedItem");
         localStorage.removeItem("round1ResultTimer");
         localStorage.removeItem("round2ResultTimer");
-        
+
     };
 
 
     return (
         <Base>
-            <div className={`container ${classes.main_box}`} style={{ marginTop: '2rem' }}>
-                <div className={classes.firstRow} style={{ marginTop: '25rem' }}>
-                    {["Mystery Box 1","Mystery Box 2","Mystery Box 3","Mystery Box 4","Mystery Box 5"].map((card,index) => (
-                        <FlipingCard
-                            key={index}
-                            isFlipped={flippedCardIndex === index}
-                            addFlip={() => handleFlip(index)} // Pass the domain to handleFlip
-                            disabled={flippedCardIndex !== null && flippedCardIndex !== index}
-                            title={card}
-                            question={question} // Pass card title to the FlipingCard component
-                        />
-                    ))}
-                </div>
-            </div>
+        <Box >
+            <Text fontSize={'40px'} align={'center'}>Choose any one Mystery Box for your particular Box</Text>
+            <Flex flexWrap="wrap"
+                gap={4}
+                justify="center"
+                align="center"
+                direction={{ base: "column", md: "row", lg: "column" }} // Ensure correct breakpoints
+                w="full"
+                p={4}>
+                {["Box 1", " Box 2", "Box 3", "Box 4", "Box 5"].map((card, index) => (
+                    <FlipingCard
+                        key={index}
+                        isFlipped={flippedCardIndex === index}
+                        addFlip={() => handleFlip(index)}
+                        disabled={flippedCardIndex !== null && flippedCardIndex !== index}
+                        title={card}
+                        question={question}
+                    />
+                ))}
+            </Flex>
 
+            </Box>
             {/* Modal to show the question */}
             <Modal
                 isOpen={isModalOpen}
                 onRequestClose={closeModal}
-                className={classes.modal}
                 overlayClassName={classes.overlay}
             >
                 <div className="modalss">
-                <h1> Question</h1>
-                <h2>{question}</h2>
-                <button  style={{marginRight:'3rem',backgroundColor:"black", color:"white"}} className='btn btn-primary' onClick={openVSCode}>Open VS Code</button>
-                <button  style={{marginLeft:'3rem',backgroundColor:"black", color:"white"}} className='btn btn-primary'  onClick={closeModal}>Close</button>
+                    <h1> Question</h1>
+                    <h2>{question}</h2>
+                    <button style={{ marginRight: '3rem', backgroundColor: "black", color: "white" }} className='btn btn-primary' onClick={openVSCode}>Open VS Code</button>
+                    <button style={{ marginLeft: '3rem', backgroundColor: "black", color: "white" }} className='btn btn-primary' onClick={closeModal}>Close</button>
                 </div>
             </Modal>
         </Base>

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CustomNavbar from './navbar';
-import "../stylesheet/ques.css";
+import { Box } from '@chakra-ui/react';
+// import "../stylesheet/ques.css";
 
 const One = () => {
   const [questionData, setQuestionData] = useState(null);
@@ -17,7 +18,7 @@ const One = () => {
         // Assuming the response data is an array of questions
         if (response.data.length > 0) {
           setQuestionData(response.data[0]); // Set the first question
-          localStorage.setItem("r2q1",response.data[0]._id);
+          localStorage.setItem("r2q1", response.data[0]._id);
         } else {
           setQuestionData(null); // No questions available
         }
@@ -35,12 +36,10 @@ const One = () => {
   if (error) return <p>Error loading question: {error.message}</p>;
 
   return (
-    <div style={{ fontSize: '1.2rem' }} className="ques ques-one-box">
+    <Box margin={{base:'5',md: '40px',lg:'50px'}}>
       <h1>Ques-1</h1>
-      {/* <p><strong>Question ID:</strong> {questionData ? questionData._id : 'No ID available'}</p> */}
       <p>{questionData ? questionData.question : 'No question data available'}</p>
-     
-    </div>
+    </Box>
   );
 }
 

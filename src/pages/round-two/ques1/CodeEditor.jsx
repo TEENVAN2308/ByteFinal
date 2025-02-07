@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, Center,Flex } from "@chakra-ui/react";
 import { Editor } from "@monaco-editor/react";
 import LanguageSelector from "./LanguageSelector";
 import { CODE_SNIPPETS } from "./constants";
@@ -16,25 +16,30 @@ const CodeEditor = () => {
     editor.focus();
   };
   const onSelect = async (language) => {
-    const code_snippet = await fetch("", {language})
+    const code_snippet = await fetch("", { language })
     setLanguage(language);
     setValue(CODE_SNIPPETS[language]);
   };
-  
+
   return (
     <Box  >
       <HStack spacing={4}>
-        <Box w="50%" >
-          <LanguageSelector language={language} onSelect={onSelect} />
+        <Box w="100%" >
+          <Flex  gap="4" align="center">
+            <LanguageSelector language={language} onSelect={onSelect} />
+            <Submit sourceCode={editorRef} language={language} />
+          </Flex>
+
           <Editor
             options={{
               minimap: {
                 enabled: false,
               },
-              lineNumbers:'on',
-              readOnly:false,
+              lineNumbers: 'on',
+              readOnly: false,
             }}
             height="75vh"
+            width="91vw"
             theme="vs-dark"
             language={language}
             defaultValue={CODE_SNIPPETS[language]}
@@ -42,9 +47,10 @@ const CodeEditor = () => {
             value={value}
             onChange={(value) => setValue(value)}
           />
+          <Output editorRef={editorRef} language={language} />
+
         </Box>
-        <Output editorRef={editorRef} language={language} />
-        <Submit sourceCode={editorRef} language={language} />
+
       </HStack>
     </Box>
   );

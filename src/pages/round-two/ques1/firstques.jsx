@@ -12,10 +12,11 @@ const First = () => {
       <ChakraProvider theme={theme} >
         <Navbar />
         <One />
-        <Box w="80%" minH="90vh" bg="#0f0a19a6" top="50vh" left="10vw" position="absolute" color="gray.500" px={5} py={8}>
-        <CodeEditor/>
-        </Box>
-      </ChakraProvider>
+        <Box w="95%" minH="60vh"  bg="#0f0a19a6" margin={{base:'5',md: '40px',lg:'50px'}} color="gray.500" px={5} py={8} marginRight={9} >
+        <CodeEditor />
+      </Box>
+      <div h="80%"> </div>
+    </ChakraProvider >
 
     </>
   );

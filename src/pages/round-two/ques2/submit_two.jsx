@@ -1,7 +1,6 @@
 import React from 'react'
-import "../../../stylesheet/ques.css"
 import { useNavigate } from 'react-router-dom';
-
+import { Box, Button, Flex, Text } from '@chakra-ui/react';
 const Submit = ({ sourceCode, language }) => {
     const navigate = useNavigate();
 
@@ -47,7 +46,17 @@ const Submit = ({ sourceCode, language }) => {
 
 
     return (
-        <button type='submit' onClick={handleSubmit_two} className='submit-two'>Submit</button>
+                <>
+                    <Flex direction={'column'} >
+                        <Text mb={1} ml={1} color={'white'} fontSize={{ base: "13px", lg: "15px", md: "16px" }}>
+                            Submit only once!:
+                        </Text>
+                        <Button _hover={{ bg: "black.700" }} fontSize="2xl" bg={'black'} mx="10px" mr="5vw"  mb={4} p={10} >
+                        <button type='submit' onClick={handleSubmit_two} className='submit-two'>Submit</button>
+                        </Button>
+                    </Flex>
+                </>
+        //
     )
 };
 export default Submit;

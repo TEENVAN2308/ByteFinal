@@ -8,7 +8,7 @@ function About() {
 
             <Base>
 
-                <div className="about-box2 mt-3">
+                <div className="about-box2 mt-1">
                     <h2 style={{ fontSize: '5rem', marginTop: '3rem' }}>Phase 1: Quiz Round</h2>
                     <p className='mt-4' style={{ fontSize: '2rem', marginTop: '3rem' }}>1. The first round is a Psuedo Code Based Quiz round where all participants will be tested on their foundational
                         knowledge of programming languages, such as C and C++.

@@ -36,14 +36,17 @@ const Output = ({ editorRef, language }) => {
   };
 
   return (
-    <Box w="50%">
-      <Text mb={2} fontSize="lg">
+    <Box w="90vw" mt="10vh">
+      <hr />
+      <Text mb={2} p={10} fontSize="4xl" >
         Output
       </Text>
       <Button
         variant="outline"
         colorScheme="green"
         mb={4}
+        fontSize="2xl"
+        padding="20px"
         isLoading={isLoading}
         onClick={runCode}
       >
@@ -52,6 +55,9 @@ const Output = ({ editorRef, language }) => {
       <Box
         height="75vh"
         p={2}
+        overflowX="hidden"
+        fontSize="2xl"
+        padding="20px"
         color={isError ? "red.400" : ""}
         border="1px solid"
         borderRadius={4}

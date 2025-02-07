@@ -2,8 +2,9 @@
 
 
 .navbar_custum {
-  position: absolute;
-  left:10vh;
+  /* position: absolute; */
+  /* left:10vh; */
+  margin:20px auto;
   font-family: "Barlow Condensed ";
     height: 15vh;
     width: 90vw;
@@ -60,3 +61,31 @@
     margin-left: auto;
   }
   
+  @media (max-width: 768px) {
+    .left img{
+      width: 150px; 
+      height: 10vh; 
+      background-color: transparent; 
+    }
+    .right img{
+      width: 100px; 
+      height: 10vh; 
+      background-color: transparent; 
+    }
+  }
+    @media (max-width: 480px) {
+      .navbar_custum
+      {
+        height:10vh;
+      }
+      .left img{
+       width: 90px; 
+        height: 8vh; 
+        background-color: transparent; 
+      }
+      .right img{
+       width: 80px; 
+        height: 8vh; 
+        background-color: transparent;
+      }
+  }
