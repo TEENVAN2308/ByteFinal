@@ -1,110 +1,89 @@
 import { getAdmins } from "../../../utils/requester";
 import { useState } from "react";
-import '../../../stylesheet/loginpage.css'
+import {
+  Box,
+  Button,
+  Input,
+  Heading,
+  VStack,
+  useToast,
+  FormControl,
+  FormLabel,
+  Container,
+} from "@chakra-ui/react";
 
 const Login = ({ setLogged, setPageMode }) => {
-
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const toast = useToast();
 
-  const changeName = (event) => {
-    setName(event.target.value);
-  };
-
-  const changePassword = (event) => {
-    setPassword(event.target.value);
-  };
-
-  function formError(){
-    const elements = document.querySelectorAll('.login-input');
-    const errClass = 'login-err';
-
-    elements.forEach(element=>{
-      element.classList.add(errClass);
-      setTimeout(function() {
-        element.classList.remove(errClass);
-      }, 1000);
+  const changeName = (event) => setName(event.target.value);
+  const changePassword = (event) => setPassword(event.target.value);
+console.log(changeName)
+console.log(changePassword)
+  const formError = () => {
+    toast({
+      title: "Login failed",
+      description: "Invalid username or password.",
+      status: "error",
+      duration: 2000,
+      isClosable: true,
     });
-  }
+  };
 
-  function formSuccess(){
+  const formSuccess = () => {
     setLogged(true);
     setPageMode(1);
-  }
+  };
 
-  async function formSubmission(){
-    try{
-      const loginPassed = await getAdmins({
-        "name": name, "password": password
-      });
-      if(loginPassed)
-        formSuccess();
-    }
-    catch(err){
+  async function formSubmission() {
+    try {
+      const loginPassed = await getAdmins({ name, password });
+      if (loginPassed) formSuccess();
+      else formError();
+    } catch (err) {
       formError();
-      console.log(name,password)
     }
   }
 
   return (
-    <div id='loginContainer' 
-      style={{
-        display: "flex", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        height: "100vh", 
-      }}>
-      <div 
-      className="shadow-lg"
-      style={{
-        padding: "40px", 
-        borderRadius: "8px", 
-        boxShadow: "0 4px 8px rgba(0,0,0,0.1)", 
-        width: "400px", 
-        textAlign: "center",
-        border:'1px solid black'
-      }}>
-        <h2 style={{ marginBottom: "20px", color: "#007bff" }}>Admin Registration</h2>
-
-        <label style={{ display: "block", marginBottom: "8px", fontWeight: "bold", fontSize:'2rem' }}>
-          Username
-        </label>
-        <input 
-          className="login-input" 
-          type="text" 
-          placeholder="Enter Admin Username" 
-          onChange={changeName} 
-          style={{ width: "100%", padding: "10px", marginBottom: "20px", borderRadius: "4px", border: "1px solid #ccc"}}
-        />
-
-        <label style={{ display: "block", marginBottom: "8px", fontWeight: "bold", fontSize:'2rem' }}>
-          Password
-        </label>
-        <input 
-          className="login-input" 
-          type="password" 
-          placeholder="Enter Admin Password" 
-          onChange={changePassword} 
-          style={{ width: "100%", padding: "10px", marginBottom: "20px", borderRadius: "4px", border: "1px solid #ccc" }}
-        />
-
-        <button 
-          id="login-btn" 
-          onClick={formSubmission} 
-          style={{ 
-            backgroundColor: "#007bff", 
-            color: "white", 
-            padding: "10px 20px", 
-            border: "none", 
-            borderRadius: "4px", 
-            cursor: "pointer",
-            fontSize:'2rem'
-          }}>
-          Login
-        </button>
-      </div>
-    </div>
-  );
-}
+    <Box
+    display="flex"
+    justifyContent="center"
+    alignItems="center"
+    height="100vh"
+    bg="gray.100"
+  >
+    <VStack
+      spacing={5}
+      p={8}
+      boxShadow="lg"
+      bg="white"
+      borderRadius="md"
+      width={{ base: "90%", md: "400px" }}
+    >
+      <Heading fontSize="2xl">Admin Login</Heading>
+      <Input
+        placeholder="Admin Name"
+        value={name}
+        onChange={changeName}
+        fontSize="lg"
+        p={4}
+      />
+      <Input
+        placeholder="Password"
+        type="password"
+        value={password}
+        onChange={changePassword}
+        fontSize="lg"
+        p={4}
+      />
+      <Button colorScheme="blue" fontSize="lg" p={4} width="full">
+        Login
+      </Button>
+    </VStack>
+  </Box>
+);
+};
 
 export default Login;

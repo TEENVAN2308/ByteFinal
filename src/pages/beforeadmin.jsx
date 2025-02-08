@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import '../stylesheet/beforeadmin.css'
 import { useNavigate } from 'react-router-dom';
+import { Box, Input, Button, VStack, Heading, Flex } from "@chakra-ui/react";
 
 
 const AdminLogin = () => {
@@ -32,37 +33,45 @@ const AdminLogin = () => {
   };
 
   return (
-    <div>
-      {isLoggedIn ? (
-        <div>
-          <h2>Welcome, Admin!</h2>
-          <button onClick={handleLogout}>Logout</button>
-          {/* Admin content goes here */}
-        </div>
-      ) : (
-        <form onSubmit={handleLogin}>
-          <h2>Admin Login</h2>
-          {error && <p style={{ color: 'red' }}>{error}</p>}
-          <div>
-            <label>Username:</label>
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-          <div>
-            <label>Password:</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <button type="submit">Login</button>
-        </form>
-      )}
-    </div>
+    <Flex
+      justify="center"
+      align="center"
+      height="100vh"
+      bg="gray.100"
+      p={40}
+    >
+      <Box
+        width={{ base: "90%", sm: "400px" }}
+        p={80}
+        boxShadow="lg"
+        bg="transparent"
+        borderRadius="md"
+        border="2px solid black"
+        textAlign="center"
+      >
+        <Heading fontSize={{ base: "2xl", md: "3xl" }} mb={20}>Admin Login</Heading>
+        <VStack spacing={4}>
+          <Input
+            placeholder="Admin Name"
+            value={username}
+onChange={(e) => setUsername(e.target.value)}
+            fontSize={{ base: "md", md: "lg" }}
+            p={14}
+          />
+          <Input
+            placeholder="Password"
+            type="password"
+           value={password}
+onChange={(e) => setPassword(e.target.value)}
+            fontSize={{ base: "md", md: "lg" }}
+            p={14}
+          />
+          <Button onClick={handleLogin} colorScheme="blue" fontSize={{ base: "md", md: "lg" }} p={14} >
+            Login
+          </Button>
+        </VStack>
+      </Box>
+    </Flex>
   );
 };
 
